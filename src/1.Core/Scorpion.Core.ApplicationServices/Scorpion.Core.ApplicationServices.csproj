@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
+    <ProjectReference Include="..\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
+    <ProjectReference Include="..\Scorpion.Core.Domain\Scorpion.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
+    <ProjectReference Include="..\..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
+    <ProjectReference Include="..\..\..\1.Core\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
