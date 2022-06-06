@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
+    <ProjectReference Include="..\..\..\1.Core\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
+    <ProjectReference Include="..\Scorpion.Infrastructures.Data.SqlServer\Scorpion.Infrastructures.Data.SqlServer.csproj" />
+  </ItemGroup>
+
+</Project>
