@@ -10,4 +10,9 @@
     <ProjectReference Include="..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
 </Project>
