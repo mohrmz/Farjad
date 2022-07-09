@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Samples.Infrastruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Samples.Infrastructures.Data.Sql.Queries", "samples\2.Infrastructures\Data\Scorpion.Samples.Infrastructures.Data.Sql.Queries\Scorpion.Samples.Infrastructures.Data.Sql.Queries.csproj", "{85D7E9C9-F34F-4EAE-9C92-6447D3A60666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Samples.Endpoints.WebAPI", "samples\3.Endpoints\Scorpion.Samples.Endpoints.WebAPI\Scorpion.Samples.Endpoints.WebAPI.csproj", "{97AD3202-AE80-454E-98C0-D37E3A7F310D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,10 @@ Global
 		{85D7E9C9-F34F-4EAE-9C92-6447D3A60666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85D7E9C9-F34F-4EAE-9C92-6447D3A60666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85D7E9C9-F34F-4EAE-9C92-6447D3A60666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AD3202-AE80-454E-98C0-D37E3A7F310D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AD3202-AE80-454E-98C0-D37E3A7F310D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AD3202-AE80-454E-98C0-D37E3A7F310D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AD3202-AE80-454E-98C0-D37E3A7F310D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +153,7 @@ Global
 		{948BC2B8-C055-4C21-9E40-21231C3EBE6A} = {F52DBCA5-2731-4D0A-904C-7420B686D4C7}
 		{29EB7072-C6AE-4EA5-A117-E419352CE690} = {948BC2B8-C055-4C21-9E40-21231C3EBE6A}
 		{85D7E9C9-F34F-4EAE-9C92-6447D3A60666} = {948BC2B8-C055-4C21-9E40-21231C3EBE6A}
+		{97AD3202-AE80-454E-98C0-D37E3A7F310D} = {FB1A3224-8EEB-455C-92F7-7D841B4E2CBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3091158-9E0C-4832-86AD-7D8E48D0D589}

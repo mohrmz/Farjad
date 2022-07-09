@@ -5,7 +5,7 @@ namespace Scorpion.Samples.Infrastructures.Data.Sql.Commands.Common
 {
     public class SampleUnitOfWork : BaseEntityFrameworkUnitOfWork<SampleCommandDbContext>, ISampleUnitOfWork
     {
-        public SampleUnitOfWork(SampleUnitOfWork dbContext) : base(dbContext)
+        public SampleUnitOfWork(SampleCommandDbContext dbContext) : base(dbContext)
         {
         }
     }
