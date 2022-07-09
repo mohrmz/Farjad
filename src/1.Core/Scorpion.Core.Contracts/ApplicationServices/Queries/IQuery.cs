@@ -7,4 +7,3 @@
 public interface IQuery<TData>
 {
 }
-

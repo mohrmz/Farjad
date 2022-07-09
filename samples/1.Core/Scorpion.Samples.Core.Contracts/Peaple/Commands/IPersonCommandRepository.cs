@@ -5,6 +5,5 @@ namespace Scorpion.Samples.Core.Contracts.Peaple.Commands
 {
     public interface IPersonCommandRepository : ICommandRepository<Person>
     {
-
     }
 }

@@ -10,7 +10,7 @@ namespace Scorpion.Samples.Core.ApplicationServices.Peaple.Commands.CreatePerson
     {
         public CreatePersonValidator(ITranslator translator)
         {
-            RuleFor(c => c.FirstName).NotEmpty().WithMessage(translator[Messages.InvalidNullValue,nameof(FirstName)]);
+            RuleFor(c => c.FirstName).NotEmpty().WithMessage(translator[Messages.InvalidNullValue, nameof(FirstName)]);
             RuleFor(c => c.LastName).NotEmpty().WithMessage(translator[Messages.InvalidNullValue, nameof(LastName)]);
         }
     }

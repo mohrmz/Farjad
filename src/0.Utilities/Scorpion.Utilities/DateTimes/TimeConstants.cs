@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// Time Constants
 /// </summary>

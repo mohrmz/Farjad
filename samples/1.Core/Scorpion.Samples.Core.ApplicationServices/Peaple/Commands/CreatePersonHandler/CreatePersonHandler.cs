@@ -6,10 +6,10 @@ using Scorpion.Utilities;
 
 namespace Scorpion.Samples.Core.ApplicationServices.Peaple.Commands.CreatePersonHandler
 {
-    
     public class CreatePersonHandler : CommandHandler<CreatePerson, long>
     {
         private readonly IPersonCommandRepository _repository;
+
         public CreatePersonHandler(ScorpionServices scorpionServices, IPersonCommandRepository repository) : base(scorpionServices)
         {
             _repository = repository;

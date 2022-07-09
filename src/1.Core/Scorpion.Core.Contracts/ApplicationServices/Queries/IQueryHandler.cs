@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
+
 /// <summary>
 /// تعریف ساختار مورد نیاز جهت پردازش یک کورئری
 /// </summary>

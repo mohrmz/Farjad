@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// متدهای کمکی جهت کار با تاریخ میلادی
 /// </summary>
@@ -120,6 +121,7 @@ public static class DateTimeUtils
         {
             case DateTimeKind.Utc:
                 return DateTime.UtcNow;
+
             default:
                 return DateTime.Now;
         }

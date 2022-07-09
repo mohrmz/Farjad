@@ -3,6 +3,7 @@ using Scorpion.Core.Contracts.ApplicationServices.Queries;
 using Scorpion.Utilities;
 
 namespace Scorpion.Core.ApplicationServices.Queries;
+
 public abstract class QueryHandler<TQuery, TData> : IQueryHandler<TQuery, TData>
     where TQuery : class, IQuery<TData>
 {
@@ -22,7 +23,6 @@ public abstract class QueryHandler<TQuery, TData> : IQueryHandler<TQuery, TData>
         result.Status = status;
         return result;
     }
-
 
     protected virtual Task<QueryResult<TData>> ResultAsync(TData data)
     {

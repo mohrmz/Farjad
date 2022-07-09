@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Common;
+
 public enum ApplicationServiceStatus
 {
     Ok = 1,
@@ -7,4 +8,3 @@ public enum ApplicationServiceStatus
     InvalidDomainState = 4,
     Exception = 5,
 }
-

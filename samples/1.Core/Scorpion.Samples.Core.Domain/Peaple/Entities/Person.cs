@@ -1,5 +1,4 @@
 ﻿using Scorpion.Core.Domain.Entities;
-using Scorpion.Core.Domain.Exceptions;
 using Scorpion.Samples.Core.Domain.Peaple.Events;
 using Scorpion.Samples.Core.Domain.Peaple.ValueObjects;
 

@@ -10,11 +10,14 @@ namespace Scorpion.Core.ApplicationServices.Commands;
 public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
 {
     #region Fields
+
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<CommandDispatcherValidationDecorator> _logger;
-    #endregion
+
+    #endregion Fields
 
     #region Constructors
+
     public CommandDispatcherValidationDecorator(CommandDispatcherDomainExceptionHandlerDecorator commandDispatcher,
                                                 IServiceProvider serviceProvider, ILogger<CommandDispatcherValidationDecorator> logger)
                                                 : base(commandDispatcher)
@@ -22,9 +25,11 @@ public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
         _serviceProvider = serviceProvider;
         _logger = logger;
     }
-    #endregion
+
+    #endregion Constructors
 
     #region Send Commands
+
     public override async Task<CommandResult> Send<TCommand>(TCommand command)
     {
         _logger.LogDebug(ZaminEventId.CommandValidation, "Validating command of type {CommandType} With value {Command}  start at :{StartDateTime}", command.GetType(), command, DateTime.Now);
@@ -53,9 +58,11 @@ public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
         _logger.LogDebug(ZaminEventId.CommandValidation, "Validating command of type {CommandType} With value {Command}  finished at :{EndDateTime}", command.GetType(), command, DateTime.Now);
         return await _commandDispatcher.Send<TCommand, TData>(command);
     }
-    #endregion
+
+    #endregion Send Commands
 
     #region Privaite Methods
+
     private TValidationResult Validate<TCommand, TValidationResult>(TCommand command) where TValidationResult : ApplicationServiceResult, new()
     {
         var validator = _serviceProvider.GetService<IValidator<TCommand>>();
@@ -82,5 +89,6 @@ public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
         }
         return res;
     }
-    #endregion
+
+    #endregion Privaite Methods
 }

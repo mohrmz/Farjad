@@ -1,6 +1,6 @@
-﻿using Scorpion.Core.Contracts.ApplicationServices.Commands;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Scorpion.Core.Contracts.ApplicationServices.Commands;
 using System.Diagnostics;
 using Zamin.Extensions.Logger.Abstractions;
 
@@ -9,21 +9,26 @@ namespace Scorpion.Core.ApplicationServices.Commands;
 public class CommandDispatcher : ICommandDispatcher
 {
     #region Fields
+
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<CommandDispatcher> _logger;
     private readonly Stopwatch _stopwatch;
-    #endregion
+
+    #endregion Fields
 
     #region Constructors
+
     public CommandDispatcher(IServiceProvider serviceProvider, ILogger<CommandDispatcher> logger)
     {
         _serviceProvider = serviceProvider;
         _stopwatch = new Stopwatch();
         _logger = logger;
     }
-    #endregion
+
+    #endregion Constructors
 
     #region Send Commands
+
     public async Task<CommandResult> Send<TCommand>(TCommand command) where TCommand : class, ICommand
     {
         _stopwatch.Start();
@@ -32,7 +37,6 @@ public class CommandDispatcher : ICommandDispatcher
             _logger.LogDebug("Routing command of type {CommandType} With value {Command}  Start at {StartDateTime}", command.GetType(), command, DateTime.Now);
             var handler = _serviceProvider.GetRequiredService<ICommandHandler<TCommand>>();
             return await handler.Handle(command);
-
         }
         catch (InvalidOperationException ex)
         {
@@ -44,7 +48,6 @@ public class CommandDispatcher : ICommandDispatcher
             _stopwatch.Stop();
             _logger.LogInformation(ZaminEventId.PerformanceMeasurement, "Processing the {CommandType} command tooks {Millisecconds} Millisecconds", command.GetType(), _stopwatch.ElapsedMilliseconds);
         }
-
     }
 
     public async Task<CommandResult<TData>> Send<TCommand, TData>(TCommand command) where TCommand : class, ICommand<TData>
@@ -68,6 +71,5 @@ public class CommandDispatcher : ICommandDispatcher
         }
     }
 
-    #endregion
-
+    #endregion Send Commands
 }

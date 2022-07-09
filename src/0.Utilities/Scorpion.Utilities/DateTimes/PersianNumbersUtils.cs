@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 
 namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// Converts English digits of a given number to their equivalent Persian digits.
 /// </summary>
@@ -100,4 +101,3 @@ public static class PersianNumbersUtils
                ;
     }
 }
-

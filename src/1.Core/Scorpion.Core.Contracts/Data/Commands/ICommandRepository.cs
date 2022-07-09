@@ -3,6 +3,7 @@ using Scorpion.Core.Domain.ValueObjects;
 using System.Linq.Expressions;
 
 namespace Scorpion.Core.Contracts.Data.Commands;
+
 /// <summary>
 /// در صورتی که داده‌ها به صورت عادی ذخیره سازی شوند از این Interface جهت تعیین اعمال اصلی موجود در بخش ذخیره سازی داده‌ها استفاده می‌شود.
 /// </summary>
@@ -46,13 +47,22 @@ public interface ICommandRepository<TEntity> : IUnitOfWork
     /// <param name="id">شناسه شی مورد نیاز</param>
     /// <returns>نمونه ساخته شده از شی</returns>
     TEntity Get(long id);
+
     Task<TEntity> GetAsync(long id);
+
     TEntity Get(BusinessId businessId);
+
     Task<TEntity> GetAsync(BusinessId businessId);
+
     TEntity GetGraph(long id);
+
     Task<TEntity> GetGraphAsync(long id);
+
     TEntity GetGraph(BusinessId businessId);
+
     Task<TEntity> GetGraphAsync(BusinessId businessId);
+
     bool Exists(Expression<Func<TEntity, bool>> expression);
+
     Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> expression);
 }

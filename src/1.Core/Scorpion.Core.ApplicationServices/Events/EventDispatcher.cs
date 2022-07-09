@@ -1,28 +1,31 @@
-﻿using Scorpion.Core.Contracts.ApplicationServices.Events;
-using Scorpion.Core.Domain.Events;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Scorpion.Core.Contracts.ApplicationServices.Events;
 
 namespace Scorpion.Core.ApplicationServices.Events;
 
 public class EventDispatcher : IEventDispatcher
 {
     #region Fields
+
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<EventDispatcher> _logger;
-    #endregion
 
+    #endregion Fields
 
     #region Constructors
+
     public EventDispatcher(IServiceProvider serviceProvider, ILogger<EventDispatcher> logger)
     {
         _serviceProvider = serviceProvider;
         _logger = logger;
     }
-    #endregion
+
+    #endregion Constructors
 
     #region Event Dispatcher
-    public Task PublishDomainEventAsync<TDomainEvent>(TDomainEvent @event) where TDomainEvent : IDomainEvent
+
+    Task IEventDispatcher.PublishDomainEventAsync<TDomainEvent>(TDomainEvent @event)
     {
         var handlers = _serviceProvider.GetServices<IDomainEventHandler<TDomainEvent>>();
 
@@ -36,6 +39,6 @@ public class EventDispatcher : IEventDispatcher
         _logger.LogDebug("Total number of handler for {EventType} is {Count}", @event.GetType(), counter);
         return Task.CompletedTask;
     }
-    #endregion
 
+    #endregion Event Dispatcher
 }

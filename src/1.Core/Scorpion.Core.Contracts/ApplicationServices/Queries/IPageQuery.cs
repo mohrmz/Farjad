@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
+
 /// <summary>
 /// اینترفیسی جهت استفاده به عنوان مارکر برای کلاس‌هایی که پارامتر‌های ورودی را برای جستجو تعیین می‌کنند!
 /// در صورتی که جستجو نیاز به صفحه بندی داشته باشد از این اینترفیس استفاده می‌شود
@@ -11,7 +12,7 @@ public interface IPageQuery<TData> : IQuery<TData>
     public int PageNumber { get; set; }
 
     /// <summary>
-    /// تعداد رکورد‌های هر صفحه 
+    /// تعداد رکورد‌های هر صفحه
     /// </summary>
     public int PageSize { get; set; }
 

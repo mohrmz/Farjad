@@ -7,6 +7,7 @@ namespace Scorpion.Samples.Core.Domain.Peaple.Events
         public Guid BusinessId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public PersonCreated(Guid businessId, string firstName, string lastName)
         {
             BusinessId = businessId;

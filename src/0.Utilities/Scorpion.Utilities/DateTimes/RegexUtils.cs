@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
 namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// متدهای کمکی مبتنی بر عبارات باقاعده
 /// </summary>
@@ -39,7 +40,6 @@ public static class RegexUtils
                 , matchTimeout: MatchTimeout
 #endif
             );
-
 
     /// <summary>
     /// آیا عبارت مدنظر حاوی حروف و اعداد فارسی است؟
@@ -86,7 +86,7 @@ public static class RegexUtils
     }
 
     /// <summary>
-    /// آیا عبارت مدنظر فقط حاوی اعداد فارسی است؟ 
+    /// آیا عبارت مدنظر فقط حاوی اعداد فارسی است؟
     /// </summary>
     public static bool ContainsOnlyPersianNumbers(this string text)
     {
@@ -94,4 +94,3 @@ public static class RegexUtils
                _matchOnlyPersianNumbersRange.IsMatch(text.StripHtmlTags());
     }
 }
-

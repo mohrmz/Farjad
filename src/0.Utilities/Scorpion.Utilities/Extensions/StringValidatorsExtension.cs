@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace Scorpion.Utilities.Extensions;
 
 public static class StringValidatorsExtension
 {
-
     /// <summary>
     /// صحت سنجی کد ملی
     /// </summary>
@@ -154,6 +148,4 @@ public static class StringValidatorsExtension
     {
         return input.Length == lenght;
     }
-
-
 }

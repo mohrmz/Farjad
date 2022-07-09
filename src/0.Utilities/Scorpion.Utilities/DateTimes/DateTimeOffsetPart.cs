@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// DateTimeOffset Part
 /// سورس این بخش در ابتدا از مجموعه کارهای آقای وحید نصیری برداشته شده است. پس از تکمیل و اصلاحات نهایی آدرس دهی و ... اصلاح می‌شود

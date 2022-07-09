@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// اجزای روز شمسی
 /// </summary>
@@ -22,7 +23,8 @@ public class PersianDay
     /// <summary>
     /// اجزای روز شمسی
     /// </summary>
-    public PersianDay() { }
+    public PersianDay()
+    { }
 
     /// <summary>
     /// اجزای روز شمسی

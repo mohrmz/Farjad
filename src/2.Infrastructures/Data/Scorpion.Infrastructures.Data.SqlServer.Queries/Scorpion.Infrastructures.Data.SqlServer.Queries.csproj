@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
     <ProjectReference Include="..\..\..\1.Core\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
     <ProjectReference Include="..\Scorpion.Infrastructures.Data.SqlServer\Scorpion.Infrastructures.Data.SqlServer.csproj" />

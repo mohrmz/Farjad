@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// Unicode Constants
 /// </summary>
@@ -18,4 +19,3 @@ public static class UnicodeConstants
         return text.ContainsFarsi() ? $"{RleChar}{text}" : text;
     }
 }
-

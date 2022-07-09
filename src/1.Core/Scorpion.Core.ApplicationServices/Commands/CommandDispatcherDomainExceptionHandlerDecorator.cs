@@ -1,8 +1,8 @@
-﻿using Scorpion.Core.Contracts.ApplicationServices.Commands;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Scorpion.Core.Contracts.ApplicationServices.Commands;
 using Scorpion.Core.Contracts.ApplicationServices.Common;
 using Scorpion.Core.Domain.Exceptions;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Zamin.Extensions.Logger.Abstractions;
 using Zamin.Extentions.Translations.Abstractions;
 
@@ -11,20 +11,24 @@ namespace Scorpion.Core.ApplicationServices.Commands;
 public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatcherDecorator
 {
     #region Fields
+
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<CommandDispatcherDomainExceptionHandlerDecorator> _logger;
-    #endregion
+
+    #endregion Fields
 
     #region Constructors
+
     public CommandDispatcherDomainExceptionHandlerDecorator(CommandDispatcher commandDispatcher, IServiceProvider serviceProvider, ILogger<CommandDispatcherDomainExceptionHandlerDecorator> logger) : base(commandDispatcher)
     {
         _serviceProvider = serviceProvider;
         _logger = logger;
     }
 
-    #endregion
+    #endregion Constructors
 
     #region Send Commands
+
     public override async Task<CommandResult> Send<TCommand>(TCommand command)
     {
         try
@@ -46,7 +50,6 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
             }
             throw ex;
         }
-
     }
 
     public override async Task<CommandResult<TData>> Send<TCommand, TData>(TCommand command)
@@ -55,7 +58,6 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
         {
             var result = await _commandDispatcher.Send<TCommand, TData>(command);
             return result;
-
         }
         catch (DomainStateException ex)
         {
@@ -72,9 +74,11 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
             throw ex;
         }
     }
-    #endregion
+
+    #endregion Send Commands
 
     #region Privaite Methods
+
     private CommandResult DomainExceptionHandlingWithoutReturnValue<TCommand>(DomainStateException ex)
     {
         var commandResult = new CommandResult
@@ -113,5 +117,6 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
 
         return result;
     }
-    #endregion
+
+    #endregion Privaite Methods
 }

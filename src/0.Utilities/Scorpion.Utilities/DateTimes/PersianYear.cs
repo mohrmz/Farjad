@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// اجزای سال شمسی
 /// </summary>
@@ -14,4 +15,3 @@ public class PersianYear
     /// </summary>
     public DateTime EndDate { set; get; }
 }
-

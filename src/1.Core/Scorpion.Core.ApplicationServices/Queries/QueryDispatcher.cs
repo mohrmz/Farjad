@@ -1,6 +1,6 @@
-﻿using Scorpion.Core.Contracts.ApplicationServices.Queries;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Scorpion.Core.Contracts.ApplicationServices.Queries;
 using System.Diagnostics;
 using Zamin.Extensions.Logger.Abstractions;
 
@@ -9,32 +9,34 @@ namespace Scorpion.Core.ApplicationServices.Queries;
 public class QueryDispatcher : IQueryDispatcher
 {
     #region Fields
+
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<QueryDispatcher> _logger;
     private readonly Stopwatch _stopwatch;
-    #endregion
+
+    #endregion Fields
 
     #region Constructors
+
     public QueryDispatcher(IServiceProvider serviceProvider, ILogger<QueryDispatcher> logger)
     {
         _serviceProvider = serviceProvider;
         _stopwatch = new Stopwatch();
         _logger = logger;
     }
-    #endregion
+
+    #endregion Constructors
 
     #region Query Dispatcher
 
     public Task<QueryResult<TData>> Execute<TQuery, TData>(TQuery query) where TQuery : class, IQuery<TData>
     {
-
         _stopwatch.Start();
         try
         {
             _logger.LogDebug("Routing query of type {QueryType} With value {Query}  Start at {StartDateTime}", query.GetType(), query, DateTime.Now);
             var handler = _serviceProvider.GetRequiredService<IQueryHandler<TQuery, TData>>();
             return handler.Handle(query);
-
         }
         catch (InvalidOperationException ex)
         {
@@ -46,11 +48,7 @@ public class QueryDispatcher : IQueryDispatcher
             _stopwatch.Stop();
             _logger.LogInformation(ZaminEventId.PerformanceMeasurement, "Processing the {QueryType} command tooks {Millisecconds} Millisecconds", query.GetType(), _stopwatch.ElapsedMilliseconds);
         }
-
-
     }
 
-    #endregion
-
-
+    #endregion Query Dispatcher
 }

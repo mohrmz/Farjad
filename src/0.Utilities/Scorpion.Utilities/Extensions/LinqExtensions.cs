@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 
 namespace Scorpion.Utilities.Extensions;
+
 public static class LinqExtensions
 {
     public static IQueryable<T> OrderByField<T>(this IQueryable<T> q, string SortField, bool Ascending)
@@ -18,7 +19,6 @@ public static class LinqExtensions
 
     public static DataTable ToDataTable<T>(this List<T> list)
     {
-
         DataTable dataTable = new(typeof(T).Name);
 
         PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
@@ -50,6 +50,7 @@ public static class LinqExtensions
         }
         return data;
     }
+
     private static T GetItem<T>(DataRow dr)
     {
         Type genericType = typeof(T);

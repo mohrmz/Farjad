@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 
 namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// Represents PersianDateTime utils.
 /// </summary>

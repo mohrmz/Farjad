@@ -1,6 +1,7 @@
 ﻿using Scorpion.Core.Contracts.ApplicationServices.Common;
 
 namespace Scorpion.Core.Contracts.ApplicationServices.Commands;
+
 /// <summary>
 /// نتیجه انجام هر عملیات به کمک این کلاس بازگشت داده می‌شود.
 /// دلایل استفاده از این الگو و پیاده سازی کاملی از این الگو را در لینک زیر می‌توانید مشاهده کنید
@@ -8,8 +9,8 @@ namespace Scorpion.Core.Contracts.ApplicationServices.Commands;
 /// </summary>
 public class CommandResult : ApplicationServiceResult
 {
-
 }
+
 /// <summary>
 /// نتیجه انجام هر عملیات به کمک این کلاس بازگشت داده می‌شود.
 /// دلایل استفاده از این الگو و پیاده سازی کاملی از این الگو را در لینک زیر می‌توانید مشاهده کنید
@@ -22,4 +23,3 @@ public class CommandResult<TData> : CommandResult
     public TData? _data;
     public TData? Data => _data;
 }
-

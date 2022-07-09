@@ -2,6 +2,7 @@
 using System.Reflection;
 
 namespace Scorpion.Utilities.DateTimes;
+
 /// <summary>
 /// فرهنگ فارسی سفارشی سازی شده
 /// </summary>
@@ -77,7 +78,6 @@ public static class PersianCulture
             {11, "بهمن"},
             {12, "اسفند"}
            };
-
 
     private static readonly Lazy<CultureInfo> _cultureInfoBuilder =
                 new Lazy<CultureInfo>(getPersianCulture, LazyThreadSafetyMode.ExecutionAndPublication);
