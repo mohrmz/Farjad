@@ -2,13 +2,12 @@
 
 namespace Scorpion.Core.Domain.Entities
 {
-/// <summary>
-/// کلاس پایه برای تمامی Entityها موجود در سامانه
-/// </summary>
+    /// <summary>
+    /// کلاس پایه برای تمامی Entityها موجود در سامانه
+    /// </summary>
 
-public abstract class Entity
+    public abstract class Entity
     {
-
         /// <summary>
         /// شناسه عددی Entityها
         /// صرفا برای ذخیره در دیتابیس و سادگی کار مورد استفاده قرار بگیرید.
@@ -28,15 +27,18 @@ public abstract class Entity
         /// بار جلو گیری از این مورد برای همه Entityها باید سازنده‌هایی تعریف شود که مقدار ورودی دارند.
         /// برای اینکه بتوان از همین Entityها برای فرایند ذخیره سازی و بازیابی از دیتابیس به کمک ORMها استفاده کرد، ضروری است که سازنده پیش‌فرض با سطح دسترسی بالا مثل Protected یا Private ایجاد شود.
         /// </summary>
-        protected Entity() { }
-
+        protected Entity()
+        { }
 
         #region Equality Check
+
         public bool Equals(Entity? other) => this == other;
+
         public override bool Equals(object? obj) =>
              obj is Entity otherObject && Id == otherObject.Id;
 
         public override int GetHashCode() => Id.GetHashCode();
+
         public static bool operator ==(Entity left, Entity right)
         {
             if (left is null && right is null)
@@ -51,6 +53,6 @@ public abstract class Entity
         public static bool operator !=(Entity left, Entity right)
             => !(right == left);
 
-        #endregion
+        #endregion Equality Check
     }
 }

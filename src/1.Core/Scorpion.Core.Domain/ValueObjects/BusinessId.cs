@@ -5,6 +5,7 @@ namespace Scorpion.Core.Domain.ValueObjects
     public class BusinessId : BaseValueObject<BusinessId>
     {
         public static BusinessId FromString(string value) => new(value);
+
         public static BusinessId FromGuid(Guid value) => new() { Value = value };
 
         public BusinessId(string value)
@@ -22,9 +23,9 @@ namespace Scorpion.Core.Domain.ValueObjects
                 throw new InvalidValueObjectStateException("ValidationErrorInvalidValue", nameof(BusinessId));
             }
         }
+
         private BusinessId()
         {
-
         }
 
         public Guid Value { get; private set; }
@@ -40,11 +41,11 @@ namespace Scorpion.Core.Domain.ValueObjects
         }
 
         public static explicit operator string(BusinessId title) => title.Value.ToString();
+
         public static implicit operator BusinessId(string value) => new(value);
 
-
         public static explicit operator Guid(BusinessId title) => title.Value;
-        public static implicit operator BusinessId(Guid value) => new() { Value = value };
 
+        public static implicit operator BusinessId(Guid value) => new() { Value = value };
     }
 }

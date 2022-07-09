@@ -15,9 +15,7 @@
 
         public DomainStateException(string message, params string[] parameters) : base(message)
         {
-
             Parameters = parameters;
-
         }
 
         public override string ToString()
@@ -37,5 +35,4 @@
             return result;
         }
     }
-
 }
