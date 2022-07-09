@@ -2,7 +2,7 @@
 
 namespace Scorpion.Samples.Core.Contracts.Peaple.Queries
 {
-    public class IPersonQueryRepository : IQueryRepository
+    public interface IPersonQueryRepository : IQueryRepository
     {
     }
 }
