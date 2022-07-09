@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="ApplicationServices\Events\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
