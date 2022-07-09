@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
     <ProjectReference Include="..\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
     <ProjectReference Include="..\Scorpion.Core.Domain\Scorpion.Core.Domain.csproj" />
