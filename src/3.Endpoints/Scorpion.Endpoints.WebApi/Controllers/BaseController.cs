@@ -1,10 +1,10 @@
-﻿using Scorpion.Core.Contracts.ApplicationServices.Commands;
+﻿using Microsoft.AspNetCore.Mvc;
+using Scorpion.Core.Contracts.ApplicationServices.Commands;
 using Scorpion.Core.Contracts.ApplicationServices.Common;
 using Scorpion.Core.Contracts.ApplicationServices.Events;
 using Scorpion.Core.Contracts.ApplicationServices.Queries;
-using Scorpion.Utilities;
-using Microsoft.AspNetCore.Mvc;
 using Scorpion.Endpoints.WebApi.Extentions;
+using Scorpion.Utilities;
 using System.Net;
 using Zamin.Extentions.Serializers.Abstractions;
 
@@ -23,13 +23,13 @@ public class BaseController : Controller
         var bytes = serializer.ListToExcelByteArray(list);
         return File(bytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     }
+
     public IActionResult Excel<T>(List<T> list, string fileName)
     {
         var serializer = (IExcelSerializer)HttpContext.RequestServices.GetRequiredService(typeof(IExcelSerializer));
         var bytes = serializer.ListToExcelByteArray(list);
         return File(bytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"{fileName}.xlsx");
     }
-
 
     protected async Task<IActionResult> Create<TCommand, TCommandResult>(TCommand command) where TCommand : class, ICommand<TCommandResult>
     {
@@ -78,7 +78,6 @@ public class BaseController : Controller
         }
         return BadRequest(result.Messages);
     }
-
 
     protected async Task<IActionResult> Delete<TCommand, TCommandResult>(TCommand command) where TCommand : class, ICommand<TCommandResult>
     {

@@ -9,7 +9,6 @@ namespace Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
 /// </summary>
 public static class AddDataAccessExtentsions
 {
-
     public static IServiceCollection AddScorpionDataAccess(
         this IServiceCollection services,
         IEnumerable<Assembly> assembliesForSearch) =>

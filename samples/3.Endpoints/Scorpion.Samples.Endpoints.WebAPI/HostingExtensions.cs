@@ -56,7 +56,6 @@ namespace Scorpion.Samples.Endpoints.WebAPI
 
             app.MapControllers();
 
-
             return app;
         }
     }

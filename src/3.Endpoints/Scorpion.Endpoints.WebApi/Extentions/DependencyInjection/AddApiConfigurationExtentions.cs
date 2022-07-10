@@ -2,7 +2,6 @@
 using Microsoft.Data.SqlClient;
 using Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler;
 
-
 namespace Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
 
 public static class AddApiConfigurationExtentions
@@ -16,7 +15,6 @@ public static class AddApiConfigurationExtentions
         services.AddScorpionDependencies(assemblyNamesForLoad);
         return services;
     }
-
 
     public static void UseScorpionApiExceptionHandler(this IApplicationBuilder app)
     {
@@ -39,10 +37,5 @@ public static class AddApiConfigurationExtentions
                 return LogLevel.Error;
             };
         });
-
     }
-
-
-
-
 }

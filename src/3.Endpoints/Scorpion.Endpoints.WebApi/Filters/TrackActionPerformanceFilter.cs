@@ -20,6 +20,7 @@ public partial class TrackActionPerformanceFilter : IActionFilter
         _logger = logger;
         _scopeInfo = scopeInfo;
     }
+
     public void OnActionExecuting(ActionExecutingContext context)
     {
         _timer = new Stopwatch();
@@ -48,7 +49,6 @@ public partial class TrackActionPerformanceFilter : IActionFilter
         }
         else
         {
-
         }
         _userScope?.Dispose();
         _hostScope?.Dispose();

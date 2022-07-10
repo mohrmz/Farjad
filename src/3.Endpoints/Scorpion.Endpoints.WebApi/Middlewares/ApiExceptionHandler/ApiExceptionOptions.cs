@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler
+﻿namespace Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler
 {
     public class ApiExceptionOptions
     {

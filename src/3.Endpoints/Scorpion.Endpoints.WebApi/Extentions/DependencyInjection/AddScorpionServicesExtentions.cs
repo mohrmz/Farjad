@@ -8,11 +8,8 @@ public static class AddScorpionServicesExtentions
     public static IServiceCollection AddScorpionUntilityServices(
         this IServiceCollection services)
     {
-
         services.AddScoped<IScopeInformation, ScopeInformation>();
         services.AddTransient<ScorpionServices>();
         return services;
     }
-
 }
-

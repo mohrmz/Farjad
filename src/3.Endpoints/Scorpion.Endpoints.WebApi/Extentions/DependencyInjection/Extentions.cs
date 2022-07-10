@@ -6,15 +6,14 @@ namespace Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
 
 public static class Extentions
 {
-
     public static IServiceCollection AddScorpionDependencies(this IServiceCollection services,
         params string[] assemblyNamesForSearch)
     {
-
         var assemblies = GetAssemblies(assemblyNamesForSearch);
         services.AddScorpionApplicationServices(assemblies).AddScorpionDataAccess(assemblies).AddScorpionUntilityServices().AddCustomeDepenecies(assemblies);
         return services;
     }
+
     public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, IEnumerable<Assembly> assemblies)
     {
         return services.AddWithTransientLifetime(assemblies, typeof(ITransientLifetime))
@@ -32,6 +31,7 @@ public static class Extentions
             .WithTransientLifetime());
         return services;
     }
+
     public static IServiceCollection AddWithScopedLifetime(this IServiceCollection services,
        IEnumerable<Assembly> assembliesForSearch,
        params Type[] assignableTo)
@@ -54,11 +54,8 @@ public static class Extentions
         return services;
     }
 
-
-
     private static List<Assembly> GetAssemblies(string[] assmblyName)
     {
-
         var assemblies = new List<Assembly>();
         var dependencies = DependencyContext.Default.RuntimeLibraries;
         foreach (var library in dependencies)
@@ -71,11 +68,10 @@ public static class Extentions
         }
         return assemblies;
     }
+
     private static bool IsCandidateCompilationLibrary(RuntimeLibrary compilationLibrary, string[] assmblyName)
     {
         return assmblyName.Any(d => compilationLibrary.Name.Contains(d))
             || compilationLibrary.Dependencies.Any(d => assmblyName.Any(c => d.Name.Contains(c)));
     }
-
 }
-

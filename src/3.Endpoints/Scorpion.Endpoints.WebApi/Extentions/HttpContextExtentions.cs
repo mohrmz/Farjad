@@ -12,8 +12,10 @@ public static class HttpContextExtentions
 
     public static IQueryDispatcher QueryDispatcher(this HttpContext httpContext) =>
         (IQueryDispatcher)httpContext.RequestServices.GetService(typeof(IQueryDispatcher));
+
     public static IEventDispatcher EventDispatcher(this HttpContext httpContext) =>
         (IEventDispatcher)httpContext.RequestServices.GetService(typeof(IEventDispatcher));
+
     public static ScorpionServices ScoprionApplicationContext(this HttpContext httpContext) =>
         (ScorpionServices)httpContext.RequestServices.GetService(typeof(ScorpionServices));
 }

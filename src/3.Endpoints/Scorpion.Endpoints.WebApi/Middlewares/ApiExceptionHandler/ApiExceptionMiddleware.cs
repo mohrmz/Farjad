@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using System.Net;
-using Zamin.Extentions.Serializers.Abstractions;
+﻿using System.Net;
 using Zamin.Extensions.Logger.Abstractions;
+using Zamin.Extentions.Serializers.Abstractions;
 using Zamin.Extentions.Translations.Abstractions;
 
 namespace Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler
@@ -66,6 +65,7 @@ namespace Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             return context.Response.WriteAsync(result);
         }
+
         private string GetInnermostExceptionMessage(Exception exception)
         {
             if (exception.InnerException != null)

@@ -1,8 +1,8 @@
-﻿using Scorpion.Core.ApplicationServices.Commands;
+﻿using FluentValidation;
+using Scorpion.Core.ApplicationServices.Commands;
 using Scorpion.Core.Contracts.ApplicationServices.Commands;
 using Scorpion.Core.Contracts.ApplicationServices.Events;
 using Scorpion.Core.Contracts.ApplicationServices.Queries;
-using FluentValidation;
 using System.Reflection;
 
 namespace Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
