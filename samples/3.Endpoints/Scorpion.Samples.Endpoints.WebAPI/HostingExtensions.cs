@@ -10,7 +10,7 @@ namespace Scorpion.Samples.Endpoints.WebAPI
     {
         public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
         {
-            string cnn = "Server=.; Initial Catalog=ScorpionSample; User Id=sa; Password=1qaz!QAZ";
+            string cnn = "Server=.; Initial Catalog=ScorpionSample; Integrated Security=True;TrustServerCertificate=True;";
             builder.Services.AddZaminParrotTranslator(c =>
             {
                 c.ConnectionString = cnn;
@@ -47,7 +47,7 @@ namespace Scorpion.Samples.Endpoints.WebAPI
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwagger();
+                app.UseSwaggerUI(c => { c.SwaggerEndpoint("./v1/swagger.json", "ScorpionAPI"); });
             }
 
             app.UseHttpsRedirection();

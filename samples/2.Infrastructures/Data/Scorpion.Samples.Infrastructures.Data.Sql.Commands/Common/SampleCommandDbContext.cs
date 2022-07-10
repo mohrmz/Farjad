@@ -11,8 +11,8 @@ namespace Scorpion.Samples.Infrastructures.Data.Sql.Commands.Common
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
+            base.OnModelCreating(builder); 
         }
     }
 }
