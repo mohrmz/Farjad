@@ -24,7 +24,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\3.Endpoints\Scorpion.Endpoints.WebApi\Scorpion.Endpoints.WebApi.csproj" />
+    <ProjectReference Include="..\..\..\src\3.Endpoints\Scorpion.Endpoints.WebApi\Scorpion.Endpoints.WebAPI.csproj" />
     <ProjectReference Include="..\..\1.Core\Scorpion.Samples.Core.Contracts\Scorpion.Samples.Core.Contracts.csproj" />
     <ProjectReference Include="..\..\2.Infrastructures\Data\Scorpion.Samples.Infrastructures.Data.Sql.Commands\Scorpion.Samples.Infrastructures.Data.Sql.Commands.csproj" />
     <ProjectReference Include="..\..\2.Infrastructures\Data\Scorpion.Samples.Infrastructures.Data.Sql.Queries\Scorpion.Samples.Infrastructures.Data.Sql.Queries.csproj" />

@@ -6,7 +6,7 @@ using Scorpion.Core.Contracts.ApplicationServices.Queries;
 using Scorpion.Endpoints.WebApi.Extentions;
 using Scorpion.Utilities;
 using System.Net;
-using Scorpion.Extensions.Serializers.Abstractions;
+using Zamin.Extentions.Serializers.Abstractions;
 
 namespace Scorpion.Endpoints.WebApi.Controllers;
 
