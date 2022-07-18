@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
-using Zamin.Extensions.Caching.Abstractions;
-using Zamin.Extentions.ObjectMappers.Abstractions;
-using Zamin.Extentions.Serializers.Abstractions;
-using Zamin.Extentions.Translations.Abstractions;
-using Zamin.Extentions.UsersManagement.Abstractions;
+using Scorpion.Extensions.Caching.Abstractions;
+using Scorpion.Extensions.ObjectMappers.Abstractions;
+using Scorpion.Extensions.Serializers.Abstractions;
+using Scorpion.Extensions.Translations.Abstractions;
+using Scorpion.Extensions.UsersManagement.Abstractions;
 
 namespace Scorpion.Utilities
 {

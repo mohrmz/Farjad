@@ -16,11 +16,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-    <PackageReference Include="Zamin.Extensions.Caching.InMemory" Version="6.3.0-beta.2" />
-    <PackageReference Include="Zamin.Extensions.ObjectMappers.AutoMapper" Version="6.3.0-beta.2" />
-    <PackageReference Include="Zamin.Extensions.Serializers.Microsoft" Version="6.3.0-beta.2" />
-    <PackageReference Include="Zamin.Extensions.Translations.Parrot" Version="6.3.0-beta.3" />
-    <PackageReference Include="Zamin.Extensions.UsersManagement" Version="6.3.0-beta.4" />
+    <PackageReference Include="Scorpion.Extensions.Translations.Parrot" Version="6.3.0-beta.3" />
   </ItemGroup>
   
   <ItemGroup>

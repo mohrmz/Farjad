@@ -2,7 +2,6 @@
 using Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
 using Scorpion.Samples.Infrastructures.Data.Sql.Commands.Common;
 using Scorpion.Samples.Infrastructures.Data.Sql.Queries.Common;
-using Zamin.Extensions.DependencyInjection;
 
 namespace Scorpion.Samples.Endpoints.WebAPI
 {
@@ -11,7 +10,7 @@ namespace Scorpion.Samples.Endpoints.WebAPI
         public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
         {
             string cnn = "Server=.; Initial Catalog=ScorpionSample; Integrated Security=True;TrustServerCertificate=True;";
-            builder.Services.AddZaminParrotTranslator(c =>
+            builder.Services.AddScorpionParrotTranslator(c =>
             {
                 c.ConnectionString = cnn;
                 c.AutoCreateSqlTable = true;
@@ -20,16 +19,16 @@ namespace Scorpion.Samples.Endpoints.WebAPI
                 c.ReloadDataIntervalInMinuts = 1;
             });
 
-            builder.Services.AddZaminWebUserInfoService(true);
+            builder.Services.AddScorpionWebUserInfoService(true);
 
-            builder.Services.AddZaminAutoMapperProfiles(option =>
+            builder.Services.AddScorpionAutoMapperProfiles(option =>
             {
                 option.AssmblyNamesForLoadProfiles = "Scorpion.Samples";
             });
 
-            builder.Services.AddZaminMicrosoftSerializer();
+            builder.Services.AddScorpionMicrosoftSerializer();
 
-            builder.Services.AddZaminInMemoryCaching();
+            builder.Services.AddScorpionInMemoryCaching();
 
             builder.Services.AddDbContext<SampleCommandDbContext>(c => c.UseSqlServer(cnn));
             builder.Services.AddDbContext<SampleQueryDbContext>(c => c.UseSqlServer(cnn));

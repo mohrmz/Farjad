@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Extentsions\Abstractions\Scorpion.Extensions.Translations.Abstractions\Scorpion.Extensions.Translations.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\src\1.Core\Scorpion.Core.ApplicationServices\Scorpion.Core.ApplicationServices.csproj" />
     <ProjectReference Include="..\..\..\src\1.Core\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
     <ProjectReference Include="..\Scorpion.Samples.Core.Contracts\Scorpion.Samples.Core.Contracts.csproj" />
