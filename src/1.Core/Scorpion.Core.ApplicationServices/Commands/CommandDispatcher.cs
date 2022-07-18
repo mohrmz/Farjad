@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Scorpion.Core.Contracts.ApplicationServices.Commands;
+using Scorpion.Extensions.Logger.Abstractions;
 using System.Diagnostics;
-using Zamin.Extensions.Logger.Abstractions;
+
 
 namespace Scorpion.Core.ApplicationServices.Commands;
 
@@ -46,7 +47,7 @@ public class CommandDispatcher : ICommandDispatcher
         finally
         {
             _stopwatch.Stop();
-            _logger.LogInformation(ZaminEventId.PerformanceMeasurement, "Processing the {CommandType} command tooks {Millisecconds} Millisecconds", command.GetType(), _stopwatch.ElapsedMilliseconds);
+            _logger.LogInformation(ScorpionEventId.PerformanceMeasurement, "Processing the {CommandType} command tooks {Millisecconds} Millisecconds", command.GetType(), _stopwatch.ElapsedMilliseconds);
         }
     }
 

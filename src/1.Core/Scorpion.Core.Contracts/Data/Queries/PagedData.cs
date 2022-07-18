@@ -1,9 +1,9 @@
 ﻿namespace Scorpion.Core.Contracts.Data.Queries;
 
 /// <summary>
-/// ساختار پایه جهت بازگشت داده‌ها هنگام کوئری گرفتن وقتی که Paging دارد
+/// Basic structure for returning data when querying when paging.
 /// </summary>
-/// <typeparam name="T">نوع داده‌ای که از کوئری دریافت می‌شود را تعیین می‌کند!</typeparam>
+/// <typeparam name="T">Determines the type of data received from the query!</typeparam>
 public class PagedData<T>
 {
     public List<T>? QueryResult { get; set; }

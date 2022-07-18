@@ -1,71 +1,79 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
 
 /// <summary>
-/// کلاس پایه جهت استفاده به عنوان مارکر برای کلاس‌هایی که پارامتر‌های ورودی را برای جستجو تعیین می‌کنند!
-/// در صورتی که جستجو نیاز به صفحه بندی داشته باشد از این اینترفیس استفاده می‌شود
+/// Base class to be used as a marker for classes that define input parameters for searching!
+/// This class is used if the search requires pagination.
 /// </summary>
 public class PageQuery<TData> : IPageQuery<TData>
 {
     /// <summary>
-    /// شماره صفحه ای که باید اطلاعات از آن بارگذاری شود
+    /// Page number from which information should be loaded.
     /// </summary>
     public int PageNumber { get; set; } = 1;
 
     /// <summary>
-    /// تعداد رکورد‌های هر صفحه
+    /// Number of records per page.
     /// </summary>
     public int PageSize { get; set; } = 10;
 
     /// <summary>
-    /// تعداد رکورد‌هایی که باید از ابتدای نتیجه رد شود تا به رکوردهای مورد نظر برسیم
+    /// The number of records that must be skipped from the beginning of the result to reach the desired records.
     /// </summary>
     public int SkipCount => (PageNumber - 1) * PageSize;
 
     /// <summary>
-    /// تعیین اینکه آیا نیاز است تعداد کل رکورد‌های موجود در جستجو نیز بازگردانده شود یا خیر
+    /// Determines whether the total number of records in the search also needs to be returned.
     /// </summary>
     public bool NeedTotalCount { get; set; }
 
     /// <summary>
-    /// تعیین ستونی که مرتب سازی بر اساس آن انجام می شود
+    /// Specify the column on which to sort.
+    /// Default value is Id
     /// </summary>
     public string SortBy { get; set; } = "Id";
 
     /// <summary>
-    /// جهت مرتب سازی داده‌ها که به صورت صعودی انجام می‌شود یا نزولی
+    /// To sort the data in ascending or descending order.
     /// </summary>
     public bool SortAscending { get; set; }
 }
 
 /// <summary>
-/// رکورد پایه جهت استفاده به عنوان مارکر برای رکورد‌هایی که پارامتر‌های ورودی را برای جستجو تعیین می‌کنند!
-/// در صورتی که جستجو نیاز به صفحه بندی داشته باشد از این اینترفیس استفاده می‌شود
+/// The base record to use as a marker for the records that define the input parameters for the search!
+/// This class is used if the search requires pagination.
 /// </summary>
 public record PageQueryRecord<TData> : IPageQuery<TData>
 {
     /// <summary>
-    /// شماره صفحه ای که باید اطلاعات از آن بارگذاری شود
+    /// Page number from which information should be loaded.
+    /// Default page number is 1
     /// </summary>
     public int PageNumber { get; set; } = 1;
+
     /// <summary>
-    /// تعداد رکورد‌های هر صفحه
+    /// The number of records that must be skipped from the beginning of the result to reach the desired records.
+    /// Default page size is 10.
     /// </summary>
     public int PageSize { get; set; } = 10;
+
     /// <summary>
-    /// تعداد رکورد‌هایی که باید از ابتدای نتیجه رد شود تا به رکوردهای مورد نظر برسیم
+    /// The number of records that must be skipped from the beginning of the result to reach the desired records.
     /// </summary>
     public int SkipCount => (PageNumber - 1) * PageSize;
+
     /// <summary>
-    /// تعیین اینکه آیا نیاز است تعداد کل رکورد‌های موجود در جستجو نیز بازگردانده شود یا خیر
+    /// Determines whether the total number of records in the search also needs to be returned.
     /// </summary>
     public bool NeedTotalCount { get; set; }
+
     /// <summary>
-    /// تعیین ستونی که مرتب سازی بر اساس آن انجام می شود
+    /// Specify the column on which to sort.
+    /// Default value is Id
     /// </summary>
     public string SortBy { get; set; } = "Id";
 
     /// <summary>
-    /// جهت مرتب سازی داده‌ها که به صورت صعودی انجام می‌شود یا نزولی
+    /// To sort the data in ascending or descending order.
     /// </summary>
     public bool SortAscending { get; set; }
 }

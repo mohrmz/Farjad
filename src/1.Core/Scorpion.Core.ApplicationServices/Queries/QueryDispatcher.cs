@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Scorpion.Core.Contracts.ApplicationServices.Queries;
+using Scorpion.Extensions.Logger.Abstractions;
 using System.Diagnostics;
-using Zamin.Extensions.Logger.Abstractions;
+
 
 namespace Scorpion.Core.ApplicationServices.Queries;
 
@@ -46,7 +47,7 @@ public class QueryDispatcher : IQueryDispatcher
         finally
         {
             _stopwatch.Stop();
-            _logger.LogInformation(ZaminEventId.PerformanceMeasurement, "Processing the {QueryType} command tooks {Millisecconds} Millisecconds", query.GetType(), _stopwatch.ElapsedMilliseconds);
+            _logger.LogInformation(ScorpionEventId.PerformanceMeasurement, "Processing the {QueryType} command tooks {Millisecconds} Millisecconds", query.GetType(), _stopwatch.ElapsedMilliseconds);
         }
     }
 

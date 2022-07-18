@@ -4,10 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage;
 using Scoprion.Core.Domain.Toolkits.ValueObjects;
 using Scorpion.Core.Domain.ValueObjects;
+using Scorpion.Extensions.UsersManagement.Abstractions;
 using Scorpion.Infrastructures.Data.SqlServer.Commands.Extensions;
 using Scorpion.Infrastructures.Data.SqlServer.Commands.ValueConversions;
 using System.Globalization;
-using Zamin.Extentions.UsersManagement.Abstractions;
+
 
 namespace Scorpion.Infrastructures.Data.SqlServer.Commands;
 

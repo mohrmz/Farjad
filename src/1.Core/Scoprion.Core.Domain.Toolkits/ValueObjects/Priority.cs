@@ -19,7 +19,7 @@ public class Priority : BaseValueObject<Priority>
     {
         if (value < 1)
         {
-            throw new InvalidValueObjectStateException("ValidationErrorValueGraterThan", nameof(Priority), "0");
+            throw new InvalidValueObjectStateException("ValidationErrorValueSmallerThan", nameof(Priority), "0");
         }
         Value = value;
     }

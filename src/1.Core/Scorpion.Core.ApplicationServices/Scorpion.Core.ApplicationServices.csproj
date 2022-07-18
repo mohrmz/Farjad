@@ -4,13 +4,20 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>scorpion.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="scorpion.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Extentsions\Scorpion.Extensions.Logger.Abstractions\Scorpion.Extensions.Logger.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\Scorpion.Extensions.Translations.Abstractions\Scorpion.Extensions.Translations.Abstractions.csproj" />
     <ProjectReference Include="..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
     <ProjectReference Include="..\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
     <ProjectReference Include="..\Scorpion.Core.Domain\Scorpion.Core.Domain.csproj" />

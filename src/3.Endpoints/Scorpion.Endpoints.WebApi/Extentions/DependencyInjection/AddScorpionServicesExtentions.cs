@@ -1,5 +1,6 @@
-﻿using Scorpion.Utilities;
-using Zamin.Extensions.Logger.Abstractions;
+﻿using Scorpion.Extensions.Logger.Abstractions;
+using Scorpion.Utilities;
+
 
 namespace Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
 

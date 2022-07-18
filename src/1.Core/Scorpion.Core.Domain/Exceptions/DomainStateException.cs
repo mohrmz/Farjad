@@ -1,23 +1,32 @@
 ﻿namespace Scorpion.Core.Domain.Exceptions
 {
     /// <summary>
-    /// خطاهای لایه Domain مربوط به Entityها و ValueObjectها به کمک Extention برای لایه‌های بالاتر ارسال می‌شود
-    /// با توجه به اینکه هم Entity و هم ValueObject به یک شکل خطا را ارسال می‌کنند یک کلاس Exception طراحی و پیاده سازی شده است.
-    /// برای اینکه در لایه‌های بالاتر بتوان تفاوت خطای و محل رخداد آن را تشخیص داد از الگوی MicroType استفاده شده.
+    /// Domain layer errors related to Entities and Value Objects are sent to higher layers with the help of Extension.
+    /// Considering that both Entity and Value Object send the error in the same way, an Exception class has been designed and implemented.
+    /// In order to be able to recognize the difference between the error and its place of occurrence in the higher layers, the MicroType pattern is used.
     /// </summary>
     public abstract class DomainStateException : Exception
     {
         /// <summary>
-        /// لیست پارامتر‌های خطا
-        /// در صورتی که پارامتری وجود داشته باشد message را به صورت الگو ارسال کرده و مقادیر پارامتر‌ها در محل مخصوص در الگو قرار می‌گیرند.
+        /// List of error parameters
+        /// If there is a parameter, send the message as a template and the values of the parameters are placed in a special place in the template.
         /// </summary>
-        public string[] Parameters { get; set; }
+        public string[]? Parameters { get; set; }
 
+        /// <summary>
+        /// Domain state exception message builder
+        /// </summary>
+        /// <param name="message">Error message or message pattern</param>
+        /// <param name="parameters">Parameters that are placed in the message pattern if present</param>
         public DomainStateException(string message, params string[] parameters) : base(message)
         {
             Parameters = parameters;
         }
 
+        /// <summary>
+        /// Converts domain dtate exception to string
+        /// </summary>
+        /// <returns>Domain state exception message string</returns>
         public override string ToString()
         {
             if (Parameters?.Length < 1)
@@ -26,7 +35,7 @@
             }
             string result = Message;
 
-            for (int i = 0; i < Parameters.Length; i++)
+            for (int i = 0; i < Parameters?.Length; i++)
             {
                 string placeHolder = $"{{{i}}}";
                 result = result.Replace(placeHolder, Parameters[i]);

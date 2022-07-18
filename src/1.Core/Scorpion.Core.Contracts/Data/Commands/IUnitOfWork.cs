@@ -1,35 +1,35 @@
 ﻿namespace Scorpion.Core.Contracts.Data.Commands;
 
 /// <summary>
-/// تعریف Interface برای الگوی UnitOfWork جهت مدیریت تراکنش‌ها با دیتابیس در این قسمت انجام شده است
-/// تعریف کامل این الگو در کتاب P of EAA وجود دارد و تعریف اولیه را در آدرس زیر می‌توان مشاهده کرد
+/// Interface definition for the UnitOfWork template to manage transactions with the database is done in this part
+/// The full definition of this pattern is in the P of EAA book and the basic definition can be found at the address below
 /// https://martinfowler.com/eaaCatalog/unitOfWork.html
 /// </summary>
 public interface IUnitOfWork
 {
     /// <summary>
-    /// در صورت نیاز به کنترل تراکنش‌ها از این متد جهت شروع تراکنش استفاده می‌شود.
+    /// If you need to control transactions, this method is used to start the transaction.
     /// </summary>
     void BeginTransaction();
 
     /// <summary>
-    /// در صورت کنترل دستی تراکنش از این متد جهت پایان موفقیت آمیز تراکنش استفاده می‌شود.
+    /// In case of manual transaction control, this method is used to successfully end the transaction.
     /// </summary>
     void CommitTransaction();
 
     /// <summary>
-    /// در صورت بروز خطا در فرایند‌ها از این متد جهت بازگشت تغییرات استفاده می‌شود.
+    /// If an error occurs in the processes, this method is used to return the changes.
     /// </summary>
     void RollbackTransaction();
 
     /// <summary>
-    /// برای تایید تراکنشی که اتوماتیک توسط سیستم ایجاد شده است از این متد استفاده می‌شود.
+    /// This method is used to confirm the transaction that was created automatically by the system.
     /// </summary>
     /// <returns></returns>
     int Commit();
 
     /// <summary>
-    /// برای تایید تراکنشی که اتوماتیک توسط سیستم ایجاد شده است از این متد استفاده می‌شود.
+    /// This method is used to confirm the transaction that was created automatically by the system.
     /// </summary>
     /// <returns></returns>
     Task<int> CommitAsync();

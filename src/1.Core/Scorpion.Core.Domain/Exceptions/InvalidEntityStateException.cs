@@ -3,10 +3,10 @@
     public class InvalidEntityStateException : DomainStateException
     {
         /// <summary>
-        /// خطا‌های مربوط به وضعیت ناصحیح در Entity ها توسط این کلاس ارسال می‌شود
+        /// Errors related to incorrect status in Entities are sent by this class.
         /// </summary>
-        /// <param name="message">پیام یا الگوی پیام خطا</param>
-        /// <param name="parameters">پارامتر‌ها که در صورت وجود در الگوی پیام جایگذاری می‌شوند</param>
+        /// <param name="message">Error message or message pattern</param>
+        /// <param name="parameters">Parameters that are placed in the message template if present</param>
         public InvalidEntityStateException(string message, params string[] parameters) : base(message)
         {
             Parameters = parameters;

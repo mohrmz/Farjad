@@ -5,47 +5,47 @@ using System.Linq.Expressions;
 namespace Scorpion.Core.Contracts.Data.Commands;
 
 /// <summary>
-/// در صورتی که داده‌ها به صورت عادی ذخیره سازی شوند از این Interface جهت تعیین اعمال اصلی موجود در بخش ذخیره سازی داده‌ها استفاده می‌شود.
+/// If the data is stored normally, this interface is used to determine the main operations in the data storage section.
 /// </summary>
-/// <typeparam name="TEntity">کلاسی که جهت ذخیره سازی انتخاب می‌شود</typeparam>
+/// <typeparam name="TEntity">The class that is selected for storage</typeparam>
 public interface ICommandRepository<TEntity> : IUnitOfWork
     where TEntity : AggregateRoot
 {
     /// <summary>
-    /// یک شی را با شناسه حذف می کند
+    /// Deletes an object by id
     /// </summary>
-    /// <param name="id">شناسه</param>
+    /// <param name="id">Identifier</param>
     void Delete(long id);
 
     /// <summary>
-    /// حذف یک شی به همراه تمامی فرزندان آن را انجام می دهد
+    /// Deletes an object along with all its children
     /// </summary>
-    /// <param name="id">شناسه</param>
+    /// <param name="id">Identifier</param>
     void DeleteGraph(long id);
 
     /// <summary>
-    /// یک شی را دریافت کرده و از دیتابیس حذف می‌کند
+    /// Gets an object and deletes it from the database
     /// </summary>
-    /// <param name="entity"></param>
+    /// <param name="entity">Specifies domain entity added to the database.</param>
     void Delete(TEntity entity);
 
     /// <summary>
-    /// داده‌های جدید را به دیتابیس اضافه می‌کند
+    /// Adds new data to the database
     /// </summary>
-    /// <param name="entity">نمونه داده‌ای که باید به دیتابیس اضافه شود.</param>
+    /// <param name="entity">Specifies domain entity added to the database.</param>
     void Insert(TEntity entity);
 
     /// <summary>
-    /// داده‌های جدید را به دیتابیس اضافه می‌کند
+    /// Adds new data to the database async
     /// </summary>
-    /// <param name="entity">نمونه داده‌ای که باید به دیتابیس اضافه شود.</param>
+    /// <param name="entity">Specifies domain entity added to the database.</param>
     Task InsertAsync(TEntity entity);
 
     /// <summary>
-    /// یک شی را با شناسه از دیتابیس یافته و بازگشت می‌دهد.
+    /// Finds and returns an object by ID from the database.
     /// </summary>
-    /// <param name="id">شناسه شی مورد نیاز</param>
-    /// <returns>نمونه ساخته شده از شی</returns>
+    /// <param name="id">Required object ID</param>
+    /// <returns>A built instance of the object</returns>
     TEntity Get(long id);
 
     Task<TEntity> GetAsync(long id);

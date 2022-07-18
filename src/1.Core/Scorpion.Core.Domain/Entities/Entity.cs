@@ -3,55 +3,57 @@
 namespace Scorpion.Core.Domain.Entities
 {
     /// <summary>
-    /// کلاس پایه برای تمامی Entityها موجود در سامانه
+    /// Base class for all entities in the system
     /// </summary>
 
-    public abstract class Entity
+    public abstract class Entity : IEquatable<Entity>
     {
         /// <summary>
-        /// شناسه عددی Entityها
-        /// صرفا برای ذخیره در دیتابیس و سادگی کار مورد استفاده قرار بگیرید.
+        /// Numerical ID of entities
+        /// Be used only for saving in the database and simplicity of work.
         /// </summary>
         public long Id { get; protected set; }
 
         /// <summary>
-        /// شناسه Entity
-        /// شناسه اصلی Entity که در همه جا باید مورد استفاده قرار گیرد BusinessId است.
-        /// تمامی ارتباطات به کمک این شناسه باید برقرار شود.
+        /// Entity ID
+        /// The main Entity ID that should be used everywhere is BusinessId.
+        /// All communications must be established with this ID.
         /// </summary>
         public BusinessId BusinessId { get; protected set; } = BusinessId.FromGuid(Guid.NewGuid());
 
         /// <summary>
-        /// سازنده پیش‌فرض به صورت Protected تعریف شده است.
-        /// با توجه به اینکه این نیاز است هنگام ساخت خواص اساسی Entity ایجاد شود، هیچ شی بدون پر کردن این خواص نباید ایجاد شود.
-        /// بار جلو گیری از این مورد برای همه Entityها باید سازنده‌هایی تعریف شود که مقدار ورودی دارند.
-        /// برای اینکه بتوان از همین Entityها برای فرایند ذخیره سازی و بازیابی از دیتابیس به کمک ORMها استفاده کرد، ضروری است که سازنده پیش‌فرض با سطح دسترسی بالا مثل Protected یا Private ایجاد شود.
+        /// The default constructor is defined as Protected.
+        /// Given that this requirement is created when constructing the basic Entity properties, no object should be created without filling these properties.
+        /// To avoid this, all Entities must be defined with constructors that have an input value.
+        /// In order to be able to use these entities for the process of storing and retrieving from the database with the help of ORMs, it is necessary to create a default constructor with a high access level such as Protected or Private.
         /// </summary>
         protected Entity()
         { }
 
         #region Equality Check
 
-        public bool Equals(Entity? other) => this == other;
+        public bool Equals(Entity? other) 
+        {
+            if (this is null && other is null)
+                return true;
 
-        public override bool Equals(object? obj) =>
-             obj is Entity otherObject && Id == otherObject.Id;
+            if (this is null || other is null)
+                return false;
+
+            return Id == other.Id;
+        } 
+
+        public override bool Equals(object? obj) 
+           =>  obj is Entity otherObject && this.Equals(otherObject);
 
         public override int GetHashCode() => Id.GetHashCode();
 
         public static bool operator ==(Entity left, Entity right)
-        {
-            if (left is null && right is null)
-                return true;
-
-            if (left is null || right is null)
-                return false;
-
-            return left.Equals(right);
-        }
+           =>  left.Equals(right);
+        
 
         public static bool operator !=(Entity left, Entity right)
-            => !(right == left);
+           => !(right == left);
 
         #endregion Equality Check
     }

@@ -1,38 +1,38 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
 
 /// <summary>
-/// اینترفیسی جهت استفاده به عنوان مارکر برای کلاس‌هایی که پارامتر‌های ورودی را برای جستجو تعیین می‌کنند!
-/// در صورتی که جستجو نیاز به صفحه بندی داشته باشد از این اینترفیس استفاده می‌شود
+/// An interface to be used as a marker for classes that define input parameters for searching!
+/// This interface is used if the search requires pagination.
 /// </summary>
 public interface IPageQuery<TData> : IQuery<TData>
 {
     /// <summary>
-    /// شماره صفحه ای که باید اطلاعات از آن بارگذاری شود
+    /// Page number from which information should be loaded.
     /// </summary>
     public int PageNumber { get; set; }
 
     /// <summary>
-    /// تعداد رکورد‌های هر صفحه
+    /// Number of records per page.
     /// </summary>
     public int PageSize { get; set; }
 
     /// <summary>
-    /// تعداد رکورد‌هایی که باید از ابتدای نتیجه رد شود تا به رکوردهای مورد نظر برسیم
+    /// The number of records that must be skipped from the beginning of the result to reach the desired records.
     /// </summary>
     public int SkipCount => (PageNumber - 1) * PageSize;
 
     /// <summary>
-    /// تعیین اینکه آیا نیاز است تعداد کل رکورد‌های موجود در جستجو نیز بازگردانده شود یا خیر
+    /// Determines whether the total number of records in the search also needs to be returned.
     /// </summary>
     public bool NeedTotalCount { get; set; }
 
     /// <summary>
-    /// تعیین ستونی که مرتب سازی بر اساس آن انجام می شود
+    /// Specify the column on which to ascending sort.
     /// </summary>
     public string SortBy { get; set; }
 
     /// <summary>
-    /// جهت مرتب سازی داده‌ها که به صورت صعودی انجام می‌شود یا نزولی
+    /// To sort the data in ascending or descending order.
     /// </summary>
     public bool SortAscending { get; set; }
 }

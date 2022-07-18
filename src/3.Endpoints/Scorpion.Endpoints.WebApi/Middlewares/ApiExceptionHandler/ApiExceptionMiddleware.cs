@@ -1,7 +1,8 @@
-﻿using System.Net;
-using Zamin.Extensions.Logger.Abstractions;
-using Zamin.Extentions.Serializers.Abstractions;
-using Zamin.Extentions.Translations.Abstractions;
+﻿using Scorpion.Extensions.Logger.Abstractions;
+using Scorpion.Extensions.Serializers.Abstractions;
+using Scorpion.Extensions.Translations.Abstractions;
+using System.Net;
+
 
 namespace Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler
 {

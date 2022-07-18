@@ -1,5 +1,8 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Common;
 
+/// <summary>
+/// Application service different status results
+/// </summary>
 public enum ApplicationServiceStatus
 {
     Ok = 1,

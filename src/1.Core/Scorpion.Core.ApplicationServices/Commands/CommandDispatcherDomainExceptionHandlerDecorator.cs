@@ -3,8 +3,8 @@ using Microsoft.Extensions.Logging;
 using Scorpion.Core.Contracts.ApplicationServices.Commands;
 using Scorpion.Core.Contracts.ApplicationServices.Common;
 using Scorpion.Core.Domain.Exceptions;
-using Zamin.Extensions.Logger.Abstractions;
-using Zamin.Extentions.Translations.Abstractions;
+using Scorpion.Extensions.Logger.Abstractions;
+using Scorpion.Extensions.Translations.Abstractions;
 
 namespace Scorpion.Core.ApplicationServices.Commands;
 
@@ -38,14 +38,14 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
         }
         catch (DomainStateException ex)
         {
-            _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+            _logger.LogError(ScorpionEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
             return DomainExceptionHandlingWithoutReturnValue<TCommand>(ex);
         }
         catch (AggregateException ex)
         {
             if (ex.InnerException is DomainStateException domainStateException)
             {
-                _logger.LogError(ZaminEventId.DomainValidationException, domainStateException, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+                _logger.LogError(ScorpionEventId.DomainValidationException, domainStateException, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
                 return DomainExceptionHandlingWithoutReturnValue<TCommand>(domainStateException);
             }
             throw ex;
@@ -61,14 +61,14 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
         }
         catch (DomainStateException ex)
         {
-            _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+            _logger.LogError(ScorpionEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
             return DomainExceptionHandlingWithReturnValue<TCommand, TData>(ex);
         }
         catch (AggregateException ex)
         {
             if (ex.InnerException is DomainStateException domainStateException)
             {
-                _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+                _logger.LogError(ScorpionEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
                 return DomainExceptionHandlingWithReturnValue<TCommand, TData>(domainStateException);
             }
             throw ex;
@@ -113,7 +113,7 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
              translator[domainStateException.Message, domainStateException.Parameters] :
                translator[domainStateException?.Message];
 
-        _logger.LogInformation(ZaminEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
+        _logger.LogInformation(ScorpionEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
 
         return result;
     }

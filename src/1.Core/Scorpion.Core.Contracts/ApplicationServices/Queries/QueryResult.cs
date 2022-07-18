@@ -3,9 +3,9 @@
 namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
 
 /// <summary>
-/// نتیجه یک کوئری را بازگشت می‌دهد
+/// Returns the result of a query
 /// </summary>
-/// <typeparam name="TData"></typeparam>
+/// <typeparam name="TData">Specifies the type of the returned data</typeparam>
 public sealed class QueryResult<TData> : ApplicationServiceResult
 {
     public TData? _data;

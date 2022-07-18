@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyModel;
+using Scorpion.Extensions.DependentyInjection.Abstractions;
 using System.Reflection;
-using Zamin.Extensions.DependencyInjection.Abstractions;
+
 
 namespace Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
 
