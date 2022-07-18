@@ -1,10 +1,10 @@
 ﻿namespace Scorpion.Core.Domain.Exceptions
 {
     /// <summary>
-    /// خطا‌های مربوط به وضعیت ناصحیح در ValueObject ها توسط این کلاس ارسال می‌شود
+    /// Errors related to incorrect status in Value Objects are sent by this class.
     /// </summary>
-    /// <param name="message">پیام یا الگوی پیام خطا</param>
-    /// <param name="parameters">پارامتر‌ها که در صورت وجود در الگوی پیام جایگذاری می‌شوند</param>
+    /// <param name="message">Error message or message pattern</param>
+    /// <param name="parameters">Parameters that are placed in the message pattern if present</param>
     public class InvalidValueObjectStateException : DomainStateException
     {
         public InvalidValueObjectStateException(string message, params string[] parameters) : base(message, parameters)
