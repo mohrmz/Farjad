@@ -59,21 +59,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.Samples.Endpoints.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{0F1B7F1F-818D-49CE-B15D-63EA52661AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Caching.Abstractions", "Extentsions\Scorpion.Extensions.Caching.Abstractions\Scorpion.Extensions.Caching.Abstractions.csproj", "{6CC77193-384F-4A40-BDD1-CBFCACF58F25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Caching.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.Caching.Abstractions\Scorpion.Extensions.Caching.Abstractions.csproj", "{6CC77193-384F-4A40-BDD1-CBFCACF58F25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.DependentyInjection.Abstractions", "Extentsions\Scorpion.Extensions.DependentyInjection.Abstractions\Scorpion.Extensions.DependentyInjection.Abstractions.csproj", "{9508881E-894D-4C62-880A-B98258E5DC10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.DependentyInjection.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.DependentyInjection.Abstractions\Scorpion.Extensions.DependentyInjection.Abstractions.csproj", "{9508881E-894D-4C62-880A-B98258E5DC10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Logger.Abstractions", "Extentsions\Scorpion.Extensions.Logger.Abstractions\Scorpion.Extensions.Logger.Abstractions.csproj", "{54BA5826-D021-4ED7-8E57-03D9AE640436}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Logger.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.Logger.Abstractions\Scorpion.Extensions.Logger.Abstractions.csproj", "{54BA5826-D021-4ED7-8E57-03D9AE640436}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.MessageBus.Abstractions", "Extentsions\Scorpion.Extensions.MessageBus.Abstractions\Scorpion.Extensions.MessageBus.Abstractions.csproj", "{D5506AFB-9ED6-4B41-9948-44BC4FB2F7BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.MessageBus.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.MessageBus.Abstractions\Scorpion.Extensions.MessageBus.Abstractions.csproj", "{D5506AFB-9ED6-4B41-9948-44BC4FB2F7BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.ObjectMappers.Abstractions", "Extentsions\Scorpion.Extensions.ObjectMappers.Abstractions\Scorpion.Extensions.ObjectMappers.Abstractions.csproj", "{FBAFBA03-94B5-491A-B0AF-1F9FF2F726D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.ObjectMappers.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.ObjectMappers.Abstractions\Scorpion.Extensions.ObjectMappers.Abstractions.csproj", "{FBAFBA03-94B5-491A-B0AF-1F9FF2F726D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Serializers.Abstractions", "Extentsions\Scorpion.Extensions.Serializers.Abstractions\Scorpion.Extensions.Serializers.Abstractions.csproj", "{495A25D2-F94B-4DD2-B249-4FA97BBD4AB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Serializers.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.Serializers.Abstractions\Scorpion.Extensions.Serializers.Abstractions.csproj", "{495A25D2-F94B-4DD2-B249-4FA97BBD4AB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Translations.Abstractions", "Extentsions\Scorpion.Extensions.Translations.Abstractions\Scorpion.Extensions.Translations.Abstractions.csproj", "{1EEA98FD-14F2-4FBD-9161-8F15C9874B97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Translations.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.Translations.Abstractions\Scorpion.Extensions.Translations.Abstractions.csproj", "{1EEA98FD-14F2-4FBD-9161-8F15C9874B97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.UsersManagement.Abstractions", "Extentsions\Scorpion.Extensions.UsersManagement.Abstractions\Scorpion.Extensions.UsersManagement.Abstractions.csproj", "{CE1867EA-D0E6-4F4F-BC36-FC3BC49B2A12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.UsersManagement.Abstractions", "Extentsions\Abstractions\Scorpion.Extensions.UsersManagement.Abstractions\Scorpion.Extensions.UsersManagement.Abstractions.csproj", "{CE1867EA-D0E6-4F4F-BC36-FC3BC49B2A12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Endpoints.WebAPI", "src\3.Endpoints\Scorpion.Endpoints.WebAPI\Scorpion.Endpoints.WebAPI.csproj", "{A878CF5D-B578-4690-AC0D-5801B9BC9917}"
 EndProject
