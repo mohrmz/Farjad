@@ -1,8 +1,9 @@
 ﻿using FluentValidation;
+using Scorpion.Extensions.Translations.Abstractions;
 using Scorpion.Samples.Core.Domain;
 using Scorpion.Samples.Core.Domain.Peaple.Entities;
 using Scorpion.Samples.Core.Domain.Peaple.ValueObjects;
-using Zamin.Extentions.Translations.Abstractions;
+
 
 namespace Scorpion.Samples.Core.ApplicationServices.Peaple.Commands.CreatePersonHandler
 {

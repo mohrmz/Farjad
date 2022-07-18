@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Scorpion.Extensions.Serializers.Abstractions;
+using Scorpion.Extensions.UsersManagement.Abstractions;
 using Scorpion.Infrastructures.Data.SqlServer.Commands.Extensions;
 using Scorpion.Infrastructures.Data.SqlServer.Commands.OutBoxEventItems;
-using Zamin.Extentions.Serializers.Abstractions;
-using Zamin.Extentions.UsersManagement.Abstractions;
+
 
 namespace Scorpion.Infrastructures.Data.SqlServer.Commands;
 

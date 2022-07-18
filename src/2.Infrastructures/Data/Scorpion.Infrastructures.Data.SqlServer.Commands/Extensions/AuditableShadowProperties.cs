@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Scorpion.Core.Domain.Entities;
-using Zamin.Extentions.UsersManagement.Abstractions;
+using Scorpion.Extensions.UsersManagement.Abstractions;
 
 namespace Scorpion.Infrastructures.Data.SqlServer.Commands.Extensions;
 

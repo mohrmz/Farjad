@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Extentsions\Scorpion.Extensions.Serializers.Abstractions\Scorpion.Extensions.Serializers.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Extentsions\Scorpion.Extensions.UsersManagement.Abstractions\Scorpion.Extensions.UsersManagement.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
     <ProjectReference Include="..\..\..\1.Core\Scoprion.Core.Domain.Toolkits\Scoprion.Core.Domain.Toolkits.csproj" />
     <ProjectReference Include="..\..\..\1.Core\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />

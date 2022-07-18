@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="6.0.0" />
+    <PackageReference Include="Scrutor" Version="4.2.0" />
+    <PackageReference Include="Scrutor.AspNetCore" Version="3.3.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Extentsions\Scorpion.Extensions.DependentyInjection.Abstractions\Scorpion.Extensions.DependentyInjection.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\Scorpion.Extensions.Serializers.Abstractions\Scorpion.Extensions.Serializers.Abstractions.csproj" />
+    <ProjectReference Include="..\..\0.Utilities\Scorpion.Utilities\Scorpion.Utilities.csproj" />
+    <ProjectReference Include="..\..\1.Core\Scorpion.Core.ApplicationServices\Scorpion.Core.ApplicationServices.csproj" />
+    <ProjectReference Include="..\..\1.Core\Scorpion.Core.Contracts\Scorpion.Core.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

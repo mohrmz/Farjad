@@ -4,7 +4,7 @@ using Scorpion.Core.Contracts.ApplicationServices.Commands;
 using Scorpion.Core.Contracts.ApplicationServices.Common;
 using Scorpion.Core.Domain.Exceptions;
 using Scorpion.Extensions.Logger.Abstractions;
-using Zamin.Extentions.Translations.Abstractions;
+using Scorpion.Extensions.Translations.Abstractions;
 
 namespace Scorpion.Core.ApplicationServices.Commands;
 
