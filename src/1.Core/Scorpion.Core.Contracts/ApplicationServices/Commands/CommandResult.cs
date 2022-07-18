@@ -20,6 +20,6 @@ public class CommandResult : ApplicationServiceResult
 /// <typeparam name="TData">The data type to return.</typeparam>
 public class CommandResult<TData> : CommandResult
 {
-    private TData? _data;
+    public TData? _data;
     public TData? Data => _data;
 }

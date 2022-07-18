@@ -8,7 +8,7 @@ namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
 /// <typeparam name="TData">Specifies the type of the returned data</typeparam>
 public sealed class QueryResult<TData> : ApplicationServiceResult
 {
-    private TData? _data;
+    public TData? _data;
 
     public TData? Data
     {
