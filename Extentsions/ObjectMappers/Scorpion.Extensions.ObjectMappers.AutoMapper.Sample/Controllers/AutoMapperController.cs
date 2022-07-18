@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Scorpion.Extensions.ObjectMappers.Abstractions;
+using Scorpion.Extensions.ObjectMappers.AutoMapper.Sample.Models;
 
-namespace Zamin.Extensions.ObjectMappers.AutoMapper.Sample.Controllers
+namespace Scorpion.Extensions.ObjectMappers.AutoMapper.Sample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

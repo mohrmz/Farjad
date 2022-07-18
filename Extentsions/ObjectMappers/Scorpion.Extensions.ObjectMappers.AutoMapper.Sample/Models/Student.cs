@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.ObjectMappers.AutoMapper.Sample.Models
+﻿namespace Scorpion.Extensions.ObjectMappers.AutoMapper.Sample.Models
 {
     public class Student
     {

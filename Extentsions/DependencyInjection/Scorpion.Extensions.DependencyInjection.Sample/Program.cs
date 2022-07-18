@@ -1,4 +1,3 @@
-
 using Scorpion.Extensions.DependencyInjection.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddCustomeDepenecies(option =>
+builder.Services.AddCustomDependecies(option =>
 {
-    option.AssmblyNamesForLoad = "Zamin";
+    option.AssmblyNamesForLoad = "Scorpion";
 });
 
 //Middlewares

@@ -11,11 +11,11 @@ public static class Extentions
         params string[] assemblyNamesForSearch)
     {
         var assemblies = GetAssemblies(assemblyNamesForSearch);
-        services.AddScorpionApplicationServices(assemblies).AddScorpionDataAccess(assemblies).AddScorpionUntilityServices().AddCustomeDepenecies(assemblies);
+        services.AddScorpionApplicationServices(assemblies).AddScorpionDataAccess(assemblies).AddScorpionUntilityServices().AddCustomDependecies(assemblies);
         return services;
     }
 
-    public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, IEnumerable<Assembly> assemblies)
+    public static IServiceCollection AddCustomDependecies(this IServiceCollection services, IEnumerable<Assembly> assemblies)
     {
         return services.AddWithTransientLifetime(assemblies, typeof(ITransientLifetime))
             .AddWithScopedLifetime(assemblies, typeof(IScopeLifetime))
@@ -58,8 +58,8 @@ public static class Extentions
     private static List<Assembly> GetAssemblies(string[] assmblyName)
     {
         var assemblies = new List<Assembly>();
-        var dependencies = DependencyContext.Default.RuntimeLibraries;
-        foreach (var library in dependencies)
+        var Dependencies = DependencyContext.Default.RuntimeLibraries;
+        foreach (var library in Dependencies)
         {
             if (IsCandidateCompilationLibrary(library, assmblyName))
             {

@@ -25,7 +25,7 @@ namespace Scorpion.Endpoints.WebApi.Middlewares.ApiExceptionHandler
             _translator = translator;
         }
 
-        public async Task Invoke(HttpContext context, IScopeInformation scopeInfo /* other dependencies */)
+        public async Task Invoke(HttpContext context, IScopeInformation scopeInfo /* other Dependencies */)
         {
             using IDisposable hostScope = _logger.BeginScope(scopeInfo.HostScopeInfo);
             using IDisposable requestScope = _logger.BeginScope(scopeInfo.RequestScopeInfo);

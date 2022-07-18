@@ -10,7 +10,7 @@ namespace Scorpion.Extensions.DependencyInjection.Extensions.DependencyInjection
 
     public static class DependencyInjectionServiceCollectionExtensions
     {
-        public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCustomDependecies(this IServiceCollection services, IConfiguration configuration)
         {
             var option = configuration.Get<DependencyInjectionOption>();
 
@@ -22,10 +22,10 @@ namespace Scorpion.Extensions.DependencyInjection.Extensions.DependencyInjection
             return services;
         }
 
-        public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, IConfiguration configuration, string sectionName)
-            => services.AddCustomeDepenecies(configuration.GetSection(sectionName));
+        public static IServiceCollection AddCustomDependecies(this IServiceCollection services, IConfiguration configuration, string sectionName)
+            => services.AddCustomDependecies(configuration.GetSection(sectionName));
 
-        public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, Action<DependencyInjectionOption> setupAction)
+        public static IServiceCollection AddCustomDependecies(this IServiceCollection services, Action<DependencyInjectionOption> setupAction)
         {
             var option = new DependencyInjectionOption();
             setupAction.Invoke(option);
@@ -59,9 +59,9 @@ namespace Scorpion.Extensions.DependencyInjection.Extensions.DependencyInjection
         private static List<Assembly> GetAssemblies(string assmblyNames)
         {
             var assemblies = new List<Assembly>();
-            var dependencies = DependencyContext.Default.RuntimeLibraries;
+            var Dependencies = DependencyContext.Default.RuntimeLibraries;
 
-            foreach (var library in dependencies)
+            foreach (var library in Dependencies)
             {
                 if (IsCandidateCompilationLibrary(library, assmblyNames.Split(',')))
                 {

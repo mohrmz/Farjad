@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Dockerfile" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Dockerfile" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
@@ -24,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Abstractions\Scorpion.Extensions.DependentyInjection.Abstractions\Scorpion.Extensions.DependentyInjection.Abstractions.csproj" />
+    <ProjectReference Include="..\Scorpion.Extensions.DependencyInjection\Scorpion.Extensions.DependencyInjection.csproj" />
   </ItemGroup>
 
 </Project>

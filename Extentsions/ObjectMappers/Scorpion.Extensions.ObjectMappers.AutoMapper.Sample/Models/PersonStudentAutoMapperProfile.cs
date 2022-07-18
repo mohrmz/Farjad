@@ -1,7 +1,12 @@
-﻿namespace Zamin.Extensions.ObjectMappers.AutoMapper.Sample.Models
+﻿using AutoMapper;
+
+namespace Scorpion.Extensions.ObjectMappers.AutoMapper.Sample.Models
 {
-    public class PersonStudentAutoMapperProfile
+    public class PersonStudentAutoMapperProfile : Profile
     {
-        CreateMap<Person, Student>().ReverseMap();
+        public PersonStudentAutoMapperProfile()
+        {
+            CreateMap<Person, Student>().ReverseMap();
+        }
     }
 }
