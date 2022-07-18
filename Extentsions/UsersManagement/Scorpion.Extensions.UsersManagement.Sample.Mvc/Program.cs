@@ -1,7 +1,24 @@
+
+using Scorpion.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = "cookie";
+    options.DefaultChallengeScheme = "oidc";
+})
+    .AddCookie("cookie")
+    .AddOpenIdConnect("oidc", options =>
+    {
+        builder.Configuration.GetSection("Identity").Bind(options);
+    });
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScorpionWebUserInfoService();
 
 var app = builder.Build();
 
@@ -18,10 +35,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .RequireAuthorization();
 
 app.Run();

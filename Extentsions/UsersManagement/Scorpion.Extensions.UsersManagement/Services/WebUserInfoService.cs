@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
+using Scorpion.Extensions.UsersManagement.Abstractions;
 using Scorpion.Extensions.UsersManagement.Extensions;
-using Scorpion.Extentions.UsersManagement.Abstractions;
+using System.Security.Claims;
 
 namespace Scorpion.Extensions.UsersManagement.Services;
 

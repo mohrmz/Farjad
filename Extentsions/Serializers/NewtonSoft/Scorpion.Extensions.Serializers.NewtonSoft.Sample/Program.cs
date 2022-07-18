@@ -1,3 +1,5 @@
+
+
 using Scorpion.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,15 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScorpionParrotTranslator(c =>
-{
-    c.ConnectionString = "Server =; Database= ;User Id = sa;Password=; MultipleActiveResultSets=true";
-    c.AutoCreateSqlTable = true;
-    c.SchemaName = "dbo";
-    c.TableName = "ParrotTranslations";
-    c.ReloadDataIntervalInMinuts = 1;
-});
-builder.Services.AddEPPlusExcelSerializer();
+builder.Services.AddScorpionNewtonSoftSerializer();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

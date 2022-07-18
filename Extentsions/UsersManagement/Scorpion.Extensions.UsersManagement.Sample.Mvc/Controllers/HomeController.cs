@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IdentityModel.Client;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Scorpion.Extensions.UsersManagement.Sample.Mvc.Models;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace Scorpion.Extensions.UsersManagement.Sample.Mvc.Controllers
 {
+
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,13 +19,28 @@ namespace Scorpion.Extensions.UsersManagement.Sample.Mvc.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public async Task<IActionResult> Index()
+            => View();
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> WeatherForecast()
         {
+            try
+            {
+                var token = await HttpContext.GetTokenAsync("access_token");
+
+                var client = new HttpClient();
+                client.SetBearerToken(token);
+
+                var response = await client.GetAsync("https://localhost:7086/api/WeatherForecast");
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var result = JsonSerializer.Deserialize<List<WeatherForecast>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                    return View(result);
+                }
+            }
+            catch { }
+
             return View();
         }
 
@@ -29,4 +50,5 @@ namespace Scorpion.Extensions.UsersManagement.Sample.Mvc.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
 }

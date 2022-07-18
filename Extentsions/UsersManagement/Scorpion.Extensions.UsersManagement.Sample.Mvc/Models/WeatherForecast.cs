@@ -1,4 +1,4 @@
-namespace Scorpion.Extensions.UsersManagement.Sample.Api
+﻿namespace Scorpion.Extensions.UsersManagement.Sample.Mvc.Models
 {
     public class WeatherForecast
     {

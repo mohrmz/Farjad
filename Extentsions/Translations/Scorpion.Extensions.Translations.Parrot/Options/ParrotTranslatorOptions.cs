@@ -1,4 +1,5 @@
 ﻿namespace Scorpion.Extensions.Translations.Parrot.Options;
+
 public class ParrotTranslatorOptions
 {
     public string ConnectionString { get; set; } = string.Empty;

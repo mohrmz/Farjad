@@ -137,6 +137,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.UsersMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.UsersManagement.Sample.Mvc", "Extentsions\UsersManagement\Scorpion.Extensions.UsersManagement.Sample.Mvc\Scorpion.Extensions.UsersManagement.Sample.Mvc.csproj", "{640A969F-8BC9-4A88-BFB4-D82412AD092C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Serializers.Microsoft", "Extentsions\Serializers\Microsoft\Scorpion.Extensions.Serializers.Microsoft\Scorpion.Extensions.Serializers.Microsoft.csproj", "{6B0E6CA9-31AF-4191-96AC-1037BE82E89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Serializers.Microsoft.Sample", "Extentsions\Serializers\Microsoft\Scorpion.Extensions.Serializers.Microsoft.Sample\Scorpion.Extensions.Serializers.Microsoft.Sample.csproj", "{99808E17-7E4D-43A3-88D0-7282C21F8A66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Serializers.NewtonSoft", "Extentsions\Serializers\NewtonSoft\Scorpion.Extensions.Serializers.NewtonSoft\Scorpion.Extensions.Serializers.NewtonSoft.csproj", "{C65BF997-80A6-4822-B1C1-91CB4CC8F2F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.Extensions.Serializers.NewtonSoft.Sample", "Extentsions\Serializers\NewtonSoft\Scorpion.Extensions.Serializers.NewtonSoft.Sample\Scorpion.Extensions.Serializers.NewtonSoft.Sample.csproj", "{6DBD2FB8-790C-40B0-91AE-578FEF9AF7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +311,22 @@ Global
 		{640A969F-8BC9-4A88-BFB4-D82412AD092C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{640A969F-8BC9-4A88-BFB4-D82412AD092C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{640A969F-8BC9-4A88-BFB4-D82412AD092C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0E6CA9-31AF-4191-96AC-1037BE82E89D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0E6CA9-31AF-4191-96AC-1037BE82E89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0E6CA9-31AF-4191-96AC-1037BE82E89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0E6CA9-31AF-4191-96AC-1037BE82E89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99808E17-7E4D-43A3-88D0-7282C21F8A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99808E17-7E4D-43A3-88D0-7282C21F8A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99808E17-7E4D-43A3-88D0-7282C21F8A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99808E17-7E4D-43A3-88D0-7282C21F8A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65BF997-80A6-4822-B1C1-91CB4CC8F2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65BF997-80A6-4822-B1C1-91CB4CC8F2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65BF997-80A6-4822-B1C1-91CB4CC8F2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65BF997-80A6-4822-B1C1-91CB4CC8F2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DBD2FB8-790C-40B0-91AE-578FEF9AF7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DBD2FB8-790C-40B0-91AE-578FEF9AF7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DBD2FB8-790C-40B0-91AE-578FEF9AF7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DBD2FB8-790C-40B0-91AE-578FEF9AF7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -370,6 +394,10 @@ Global
 		{C2C97376-8D9E-4C16-8F9A-5AF9E6A351E2} = {1EF69E5D-359C-4E59-87BA-D8EAFE8B3361}
 		{F15961BB-58E8-4B97-91DE-7BF746E5D1F7} = {1EF69E5D-359C-4E59-87BA-D8EAFE8B3361}
 		{640A969F-8BC9-4A88-BFB4-D82412AD092C} = {1EF69E5D-359C-4E59-87BA-D8EAFE8B3361}
+		{6B0E6CA9-31AF-4191-96AC-1037BE82E89D} = {7659F75D-2FE0-4852-8EC0-0DBA5CD9C059}
+		{99808E17-7E4D-43A3-88D0-7282C21F8A66} = {7659F75D-2FE0-4852-8EC0-0DBA5CD9C059}
+		{C65BF997-80A6-4822-B1C1-91CB4CC8F2F1} = {F62ECF2F-054C-4CBC-81D7-A661B4C15F2F}
+		{6DBD2FB8-790C-40B0-91AE-578FEF9AF7BA} = {F62ECF2F-054C-4CBC-81D7-A661B4C15F2F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3091158-9E0C-4832-86AD-7D8E48D0D589}
