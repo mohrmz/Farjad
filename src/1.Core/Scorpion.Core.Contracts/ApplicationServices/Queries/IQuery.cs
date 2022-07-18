@@ -1,9 +1,9 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Queries;
 
 /// <summary>
-/// اینترفیسی جهت استفاده به عنوان مارکر برای کلاس‌هایی که پارامتر‌های ورودی را برای جستجو تعیین می‌کنند!
+/// An interface to be used as a marker for classes that define input parameters for searching!
 /// </summary>
-/// <typeparam name="TData">نوع بازگشتی را تعیین می‌کند</typeparam>
+/// <typeparam name="TData">Specifies the type of the returned data</typeparam>
 public interface IQuery<TData>
 {
 }

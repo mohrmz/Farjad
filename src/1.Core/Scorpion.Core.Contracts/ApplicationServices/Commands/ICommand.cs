@@ -1,17 +1,17 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Commands;
 
 /// <summary>
-/// جهت علامت گذاری کلاسی که پارامتر‌های ورودی درستور را دارد از این اینترفیس اسفتاده می‌شود
+/// This interface is used to mark the class that has the input parameters of the command
 /// </summary>
 public interface ICommand
 {
 }
 
 /// <summary>
-/// جهت علامت گذاری کلاسی که پارامتر‌های ورودی درستور را دارد از این اینترفیس اسفتاده می‌شود
-/// اگر به ازای دستور ارسال شده مقدار خروجی باید بازگشت داده شود از این اینترفیس استفاده می‌شود
+/// This interface is used to mark the class that has the input parameters of the command
+/// This interface is used if the output value should be returned for the sent command
 /// </summary>
-/// <typeparam name="TData">نوع داده‌ای که در ازای دستور باید بازگشت داده شود</typeparam>
+/// <typeparam name="TData">The data type to be returned by the command</typeparam>
 public interface ICommand<TData>
 {
 }

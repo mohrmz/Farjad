@@ -15,14 +15,14 @@
         /// </summary>
         /// <param name="other">Another value object for equlity check</param>
         /// <returns>Equality status</returns>
-        public bool Equals(TValueObject other) => this == other;
+        public bool Equals(TValueObject? other) => this == other;
 
         /// <summary>
         /// Checks equality status
         /// </summary>
         /// <param name="obj">Another value object for equlity check</param>
         /// <returns>Equality status</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is TValueObject otherObject)
             {

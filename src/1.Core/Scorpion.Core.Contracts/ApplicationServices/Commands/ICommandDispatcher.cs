@@ -1,26 +1,25 @@
 ﻿namespace Scorpion.Core.Contracts.ApplicationServices.Commands;
 
 /// <summary>
-/// تعریف ساختار برای مدیریت دستورات. پیاده سازی الگوی Mediator
-/// از این الگو جهت کاهش پیچیدگی صدا زدن دستورات استفاده می‌شود
+/// Define structure to manage commands. Implementation of the Mediator pattern.
+/// This pattern is used to reduce the complexity of calling commands.
 /// </summary>
 public interface ICommandDispatcher
 {
     /// <summary>
-    /// یک دستور از نوع ICommand را دریافت کرده و پیاده سازی مناسب جهت مدیریت این دستور را یافته و کار را برای ادامه پردازش به آن پیاده سازی تحویل می‌شود.
+    /// An TCommand command is received and the appropriate implementation is found to manage this command and the work is handed over to that implementation to continue processing.
     /// </summary>
-    /// <typeparam name="TCommand">نوع دستور را تعیین می‌کند</typeparam>
-    /// <param name="command">نام دستور</param>
-    /// <returns></returns>
-
+    /// <typeparam name="TCommand">Specifies the command type</typeparam>
+    /// <param name="command">The name of the command</param>
+    /// <returns>Appropriate command  result</returns>
     Task<CommandResult> Send<TCommand>(TCommand command) where TCommand : class, ICommand;
 
     /// <summary>
-    /// یک دستور از نوع ICommand را دریافت کرده و پیاده سازی مناسب جهت مدیریت این دستور را یافته و کار را برای ادامه پردازش به آن پیاده سازی تحویل می‌شود.
+    /// An TCommand command is received and the appropriate implementation is found to manage this command and the work is handed over to that implementation to continue processing.
     /// </summary>
-    /// <typeparam name="TCommand">نوع دستور را تعیین می‌کند</typeparam>
-    /// <typeparam name="TData">نوع داده ای که از دستور بازگشت داده می‌شود</typeparam>
-    /// <param name="command">نام دستور</param>
-    /// <returns></returns>
+    /// <typeparam name="TCommand">Specifies the command type</typeparam>
+    /// <typeparam name="TData">The data type returned from the command</typeparam>
+    /// <param name="command">The name of the command</param>
+    /// <returns>Appropriate command  result with data</returns>
     Task<CommandResult<TData>> Send<TCommand, TData>(TCommand command) where TCommand : class, ICommand<TData>;
 }
