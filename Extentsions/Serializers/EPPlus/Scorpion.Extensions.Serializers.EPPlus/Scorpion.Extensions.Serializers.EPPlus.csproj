@@ -4,7 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>scorpion.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="scorpion.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Extensions\DependencyInjection\" />
@@ -14,7 +19,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
-    <PackageReference Include="EPPlus" Version="5.8.4" />
+    <PackageReference Include="EPPlus" Version="6.0.6" />
   </ItemGroup>
 
   <ItemGroup>

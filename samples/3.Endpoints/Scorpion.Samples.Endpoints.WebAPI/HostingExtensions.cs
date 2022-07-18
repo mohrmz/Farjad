@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Scorpion.Endpoints.WebApi.Extentions.DependencyInjection;
+using Scorpion.Extensions.Caching.InMemory.Extensions.DependencyInjection;
+using Scorpion.Extensions.DependencyInjection;
+using Scorpion.Extensions.ObjectMappers.AutoMapper.Extensions.DependencyInjection;
 using Scorpion.Samples.Infrastructures.Data.Sql.Commands.Common;
 using Scorpion.Samples.Infrastructures.Data.Sql.Queries.Common;
 
