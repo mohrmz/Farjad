@@ -6,7 +6,7 @@ namespace Scorpion.Core.Domain.Entities
     /// Base class for all entities in the system
     /// </summary>
 
-    public abstract class Entity
+    public abstract class Entity : IEquatable<Entity>
     {
         /// <summary>
         /// Numerical ID of entities
@@ -32,26 +32,28 @@ namespace Scorpion.Core.Domain.Entities
 
         #region Equality Check
 
-        public bool Equals(Entity? other) => this == other;
+        public bool Equals(Entity? other) 
+        {
+            if (this is null && other is null)
+                return true;
 
-        public override bool Equals(object? obj) =>
-             obj is Entity otherObject && Id == otherObject.Id;
+            if (this is null || other is null)
+                return false;
+
+            return Id == other.Id;
+        } 
+
+        public override bool Equals(object? obj) 
+           =>  obj is Entity otherObject && this.Equals(otherObject);
 
         public override int GetHashCode() => Id.GetHashCode();
 
         public static bool operator ==(Entity left, Entity right)
-        {
-            if (left is null && right is null)
-                return true;
-
-            if (left is null || right is null)
-                return false;
-
-            return left.Equals(right);
-        }
+           =>  left.Equals(right);
+        
 
         public static bool operator !=(Entity left, Entity right)
-            => !(right == left);
+           => !(right == left);
 
         #endregion Equality Check
     }
