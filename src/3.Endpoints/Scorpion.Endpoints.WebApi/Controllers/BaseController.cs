@@ -4,9 +4,9 @@ using Scorpion.Core.Contracts.ApplicationServices.Common;
 using Scorpion.Core.Contracts.ApplicationServices.Events;
 using Scorpion.Core.Contracts.ApplicationServices.Queries;
 using Scorpion.Endpoints.WebApi.Extentions;
+using Scorpion.Extensions.Serializers.Abstractions;
 using Scorpion.Utilities;
 using System.Net;
-using Scorpion.Extensions.Serializers.Abstractions;
 
 namespace Scorpion.Endpoints.WebApi.Controllers;
 
