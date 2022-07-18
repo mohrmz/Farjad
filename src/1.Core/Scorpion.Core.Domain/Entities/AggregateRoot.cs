@@ -4,24 +4,24 @@ using System.Reflection;
 namespace Scorpion.Core.Domain.Entities
 {
     /// <summary>
-    /// پیاده سازی الگوی AggregateRoot
-    /// توضیحات کامل در مورد این الگو را در آدرس زیر می‌توانید مشاهده نمایید
+    /// Implementing the Aggregate Root pattern
+    /// You can see the full description of this pattern at the address below
     /// https://martinfowler.com/bliki/DDD_Aggregate.html
     ///
     /// </summary>
     public abstract class AggregateRoot : Entity
     {
         /// <summary>
-        /// لیست Evantهای مربوطه را نگهداری می‌کند
+        /// It maintains a list of related Evants
         /// </summary>
-        private readonly List<IDomainEvent> _events;
+        private readonly List<IDomainEvent>? _events;
 
         protected AggregateRoot() => _events = new();
 
         /// <summary>
-        /// سازنده Aggregate برای ایجاد Aggregate از روی Eventها
+        /// Aggregate Builder to create Aggregate from Events
         /// </summary>
-        /// <param name="events">در صورتی که Event از قبل وجود داشته باشد توسط این پارامتر به Aggregate ارسال می‌گردد</param>
+        /// <param name="events">If the Event already exists, it will be sent to the Aggregate by this parameter</param>
         public AggregateRoot(IEnumerable<IDomainEvent> events)
         {
             if (events == null || !events.Any()) return;
@@ -31,34 +31,43 @@ namespace Scorpion.Core.Domain.Entities
             }
         }
 
+        /// <summary>
+        /// Adds a new event to the set of events in this aggregate.
+        /// Invoke event on method if exists.
+        /// </summary>
+        /// <param name="event">Domain related event</param>
         protected void Apply(IDomainEvent @event)
         {
             Mutate(@event);
             AddEvent(@event);
         }
 
+        /// <summary>
+        /// Invoke event on method if exists.
+        /// </summary>
+        /// <param name="event">Domain related event</param>
         private void Mutate(IDomainEvent @event)
         {
             var onMethod = this.GetType().GetMethod("On", BindingFlags.Instance | BindingFlags.NonPublic, new Type[] { @event.GetType() });
-            onMethod.Invoke(this, new[] { @event });
+            onMethod?.Invoke(this, new[] { @event });
         }
 
         /// <summary>
-        /// یک Event جدید به مجموعه Eventهای موجود در این Aggregate اضافه می‌کند.
-        /// مسئولیت ساخت و ارسال Event به عهده خود Aggregateها می‌باشد.
+        /// Adds a new event to the set of events in this aggregate.
+        /// Aggregates themselves are responsible for creating and sending the event.
         /// </summary>
         /// <param name="event"></param>
-        protected void AddEvent(IDomainEvent @event) => _events.Add(@event);
+        protected void AddEvent(IDomainEvent @event) => _events?.Add(@event);
 
         /// <summary>
-        /// لیستی از Eventهای رخداده برای Aggregate را به صورت فقط خواندی و غیر قابل تغییر را بازگشت می‌دهد
+        /// Returns a list of events that have occurred for the Aggregate in a read-only and immutable form.
         /// </summary>
-        /// <returns>لیست Eventها</returns>
-        public IEnumerable<IDomainEvent> GetEvents() => _events.AsEnumerable();
+        /// <returns>List of events</returns>
+        public IEnumerable<IDomainEvent> GetEvents() => _events?.AsEnumerable() ?? Enumerable.Empty<IDomainEvent>();
 
         /// <summary>
-        /// Eventهای موجود در این Aggregate را پاک می‌کند
+        /// Deletes the events in this Aggregate
         /// </summary>
-        public void ClearEvents() => _events.Clear();
+        public void ClearEvents() => _events?.Clear();
     }
 }
