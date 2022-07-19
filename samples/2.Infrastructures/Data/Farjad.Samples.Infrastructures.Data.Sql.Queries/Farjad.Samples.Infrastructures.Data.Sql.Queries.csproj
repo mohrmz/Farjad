@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Farjad.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Farjad.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\2.Infrastructures\Data\Farjad.Infrastructures.Data.SqlServer.Queries\Farjad.Infrastructures.Data.SqlServer.Queries.csproj" />
+    <ProjectReference Include="..\..\..\1.Core\Farjad.Samples.Core.Contracts\Farjad.Samples.Core.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
