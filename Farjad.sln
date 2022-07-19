@@ -145,6 +145,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Extensions.ObjectMap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Extensions.ObjectMappers.AutoMapper.Sample", "Extentsions\ObjectMappers\Farjad.Extensions.ObjectMappers.AutoMapper.Sample\Farjad.Extensions.ObjectMappers.AutoMapper.Sample.csproj", "{E959FB3C-746E-40AF-A203-0125D727C231}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{46984596-933D-4A75-AD51-1C049AA70A24}"
+	ProjectSection(SolutionItems) = preProject
+		build\GetBuildVersion.psm1 = build\GetBuildVersion.psm1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
