@@ -1,8 +1,0 @@
-﻿using Scorpion.Extensions.DependentyInjection.Abstractions;
-
-namespace Scorpion.Extensions.DependencyInjection.Sample.Services;
-
-public interface IGetGuidTransientService : ITransientLifetime
-{
-    Guid Execute();
-}

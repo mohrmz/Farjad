@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Extentsions\Caching\InMemory\Farjad.Extensions.Caching.InMemory\Farjad.Extensions.Caching.InMemory.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\DependencyInjection\Farjad.Extensions.DependencyInjection\Farjad.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\ObjectMappers\Farjad.Extensions.ObjectMappers.AutoMapper\Farjad.Extensions.ObjectMappers.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\Serializers\Microsoft\Farjad.Extensions.Serializers.Microsoft\Farjad.Extensions.Serializers.Microsoft.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\Translations\Farjad.Extensions.Translations.Parrot\Farjad.Extensions.Translations.Parrot.csproj" />
+    <ProjectReference Include="..\..\..\Extentsions\UsersManagement\Farjad.Extensions.UsersManagement\Farjad.Extensions.UsersManagement.csproj" />
+    <ProjectReference Include="..\..\..\src\3.Endpoints\Farjad.Endpoints.WebApi\Farjad.Endpoints.WebAPI.csproj" />
+    <ProjectReference Include="..\..\1.Core\Farjad.Samples.Core.Contracts\Farjad.Samples.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\2.Infrastructures\Data\Farjad.Samples.Infrastructures.Data.Sql.Commands\Farjad.Samples.Infrastructures.Data.Sql.Commands.csproj" />
+    <ProjectReference Include="..\..\2.Infrastructures\Data\Farjad.Samples.Infrastructures.Data.Sql.Queries\Farjad.Samples.Infrastructures.Data.Sql.Queries.csproj" />
+  </ItemGroup>
+
+ 
+</Project>
