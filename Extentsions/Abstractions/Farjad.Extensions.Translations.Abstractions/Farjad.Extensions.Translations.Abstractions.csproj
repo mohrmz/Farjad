@@ -6,10 +6,13 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>Farjad.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>Farjad.png</PackageIcon>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="Farjad.ico" />
+    <None Include="Farjad.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
 </Project>

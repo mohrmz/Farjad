@@ -8,10 +8,13 @@
     <AssemblyVersion>2.0.0</AssemblyVersion>
     <FileVersion>2.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>Farjad.png</PackageIcon>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="Farjad.ico" />
+    <None Include="Farjad.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
 </Project>
