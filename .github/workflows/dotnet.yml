@@ -58,4 +58,4 @@ jobs:
     - name: Publish to github
       if: startsWith(github.ref, 'refs/heads/release')
       run: dotnet nuget add source --username mohrmz --password ${{ secrets.FARJAD }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/mohrmz/index.json"
-      run: dotnet nuget push **\*.nupkg  --api-key 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 --source "github"
+      run: dotnet nuget push **\*.nupkg  --api-key "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" --source "github"
