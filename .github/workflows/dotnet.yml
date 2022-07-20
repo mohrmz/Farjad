@@ -54,3 +54,7 @@ jobs:
     - name: Publish
       if: startsWith(github.ref, 'refs/heads/release')
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.FARJAD}} -SkipDuplicate
+
+    - name: Publish to github
+      if: startsWith(github.ref, 'refs/heads/release')
+      run: nuget push **\*.nupkg -Source 'github' -ApiKey ${{secrets.FARJAD}} -SkipDuplicate
