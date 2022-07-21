@@ -56,5 +56,4 @@ jobs:
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.FARJAD}} -SkipDuplicate
 
     - name: Publish to github
-      if: startsWith(github.ref, 'refs/heads/release')
-      run: dotnet nuget add source --username mohrmz --password ${{ secrets.FARJAD }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/mohrmz/index.json"
+      run: dotnet nuget push **\*.nupkg --source "github"
