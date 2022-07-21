@@ -6,11 +6,13 @@ on:
     - main
     - 'release*'
     - master
+    - 'prerelease*'
   pull_request:
     branches:
     - main
     - 'release*'
     - master
+    - 'prerelease*'
 
 jobs:
   build:
