@@ -59,4 +59,4 @@ jobs:
 
     - name: Publish to github
       if: startsWith(github.ref, 'refs/heads/release')
-      run: dotnet nuget push **\*.nupkg --source "github" --api-key $Token --skip-duplicate
+      run: dotnet nuget push **\*.nupkg --source "github" --api-key ${{Token}} --skip-duplicate
