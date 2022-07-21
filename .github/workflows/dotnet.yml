@@ -4,7 +4,7 @@ on:
   push:
     branches:
     - main
-    - 'releases/**'
+    - 'release*'
     - master
   pull_request:
     branches:
@@ -57,4 +57,5 @@ jobs:
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.FARJAD}} -SkipDuplicate
 
     - name: Publish to github
+      if: startsWith(github.ref, 'refs/heads/release')
       run: dotnet nuget push **\*.nupkg --source "github" --api-key ${{secrets.FARJAD}} --skip-duplicate
