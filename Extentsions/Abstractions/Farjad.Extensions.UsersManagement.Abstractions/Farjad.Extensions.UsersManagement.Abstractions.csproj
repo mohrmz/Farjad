@@ -12,6 +12,8 @@
     <PackageProjectUrl>https://github.com/mohrmz/Farjad</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mohrmz/Farjad</RepositoryUrl>
     <PackageReleaseNotes>Publish Github Packages</PackageReleaseNotes>
+    <Copyright>All rights reserved for Mohammad Ramezani</Copyright>
+    <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
