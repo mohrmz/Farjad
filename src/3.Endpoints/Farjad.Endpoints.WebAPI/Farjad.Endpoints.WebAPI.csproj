@@ -34,13 +34,13 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Farjad.Extensions.DependentyInjection.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Farjad.Extensions.Logger.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Farjad.Extensions.Serializers.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Farjad.Extensions.Translations.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Farjad.Utilities" Version="2.0.0" />
-    <PackageReference Include="Farjad.Core.ApplicationServices" Version="2.0.0" />
-    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.0" />
+    <PackageReference Include="Farjad.Extensions.DependentyInjection.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Logger.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Serializers.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Translations.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Utilities" Version="2.0.1" />
+    <PackageReference Include="Farjad.Core.ApplicationServices" Version="2.0.1" />
+    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.1" />
   </ItemGroup>
 
 </Project>

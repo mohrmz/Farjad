@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\src\2.Infrastructures\Data\Farjad.Infrastructures.Data.SqlServer.Queries\Farjad.Infrastructures.Data.SqlServer.Queries.csproj" />
+    <PackageReference Include="Farjad.Infrastructures.Data.SqlServer.Queries" Version="2.0.1" />
     <ProjectReference Include="..\..\..\1.Core\Farjad.Samples.Core.Contracts\Farjad.Samples.Core.Contracts.csproj" />
   </ItemGroup>
 

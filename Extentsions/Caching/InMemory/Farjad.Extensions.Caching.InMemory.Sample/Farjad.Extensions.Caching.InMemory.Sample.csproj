@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-    <PackageReference Include="Farjad.Extensions.Caching.InMemory" Version="2.0.0" />
-    <PackageReference Include="Farjad.Extensions.Caching.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Farjad.Extensions.Caching.InMemory" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Caching.Abstractions" Version="2.0.1" />
   </ItemGroup>
 
 </Project>

@@ -34,7 +34,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
-    <PackageReference Include="Farjad.Extensions.ObjectMappers.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Farjad.Extensions.ObjectMappers.Abstractions" Version="2.0.1" />
   </ItemGroup>
 
 </Project>

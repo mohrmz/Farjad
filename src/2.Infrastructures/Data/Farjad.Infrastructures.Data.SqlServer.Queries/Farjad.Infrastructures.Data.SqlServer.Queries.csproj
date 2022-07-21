@@ -28,9 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Farjad.Utilities" Version="2.0.0" />
-    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.0" />
-    <PackageReference Include="Farjad.Infrastructures.Data.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Farjad.Utilities" Version="2.0.1" />
+    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.1" />
+    <PackageReference Include="Farjad.Infrastructures.Data.SqlServer" Version="2.0.1" />
   </ItemGroup>
 
 </Project>
