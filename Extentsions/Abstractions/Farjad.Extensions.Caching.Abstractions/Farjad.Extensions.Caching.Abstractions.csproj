@@ -21,6 +21,7 @@
     <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
   </PropertyGroup>
 
+  
   <ItemGroup>
     <Content Include="Farjad.ico" />
     <None Include="Farjad.png" Pack="true" PackagePath="" />
