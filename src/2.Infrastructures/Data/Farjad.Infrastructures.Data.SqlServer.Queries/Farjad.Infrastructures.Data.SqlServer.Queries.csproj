@@ -1,19 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Farjad.ico</ApplicationIcon>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>Farjad.png</PackageIcon>
+    <Version>2.0.1</Version>
+    <Authors>Mohammad Ramezani</Authors>
+    <Company>Farjad</Company>
+    <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
+    <PackageDescription>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</PackageDescription>
+    <PackageProjectUrl>https://github.com/mohrmz/Farjad</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohrmz/Farjad</RepositoryUrl>
+    <PackageReleaseNotes>Publish Github Packages</PackageReleaseNotes>
+    <Copyright>All rights reserved for Mohammad Ramezani</Copyright>
+    <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+    <Content Include="Farjad.ico" />
+    <None Include="Farjad.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\0.Utilities\Farjad.Utilities\Farjad.Utilities.csproj" />
-    <ProjectReference Include="..\..\..\1.Core\Farjad.Core.Contracts\Farjad.Core.Contracts.csproj" />
-    <ProjectReference Include="..\Farjad.Infrastructures.Data.SqlServer\Farjad.Infrastructures.Data.SqlServer.csproj" />
+    <PackageReference Include="Farjad.Utilities" Version="2.0.0" />
+    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.0" />
+    <PackageReference Include="Farjad.Infrastructures.Data.SqlServer" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

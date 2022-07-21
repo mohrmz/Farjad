@@ -5,14 +5,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationIcon>Farjad.ico</ApplicationIcon>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>Farjad.png</PackageIcon>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>Mohammad Ramezani</Authors>
     <Company>Farjad</Company>
     <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
-
-    <PackageDescription>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</PackageDescription><PackageProjectUrl>https://github.com/mohrmz/Farjad</PackageProjectUrl>
+    <PackageDescription>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</PackageDescription>
+    <PackageProjectUrl>https://github.com/mohrmz/Farjad</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mohrmz/Farjad</RepositoryUrl>
     <PackageReleaseNotes>Publish Github Packages</PackageReleaseNotes>
     <Copyright>All rights reserved for Mohammad Ramezani</Copyright>
@@ -21,17 +23,14 @@
 
   <ItemGroup>
     <Content Include="Farjad.ico" />
-    <None Include="Farjad.png" Pack="true" PackagePath=""/>
+    <None Include="Farjad.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Abstractions\Farjad.Extensions.Serializers.Abstractions\Farjad.Extensions.Serializers.Abstractions.csproj" />
+    <PackageReference Include="Farjad.Extensions.Serializers.Abstractions" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

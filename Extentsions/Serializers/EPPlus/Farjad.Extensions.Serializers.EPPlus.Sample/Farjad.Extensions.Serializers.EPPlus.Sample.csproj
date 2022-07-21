@@ -13,12 +13,9 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Abstractions\Farjad.Extensions.Serializers.Abstractions\Farjad.Extensions.Serializers.Abstractions.csproj" />
-    <ProjectReference Include="..\..\..\Translations\Farjad.Extensions.Translations.Parrot\Farjad.Extensions.Translations.Parrot.csproj" />
-    <ProjectReference Include="..\Farjad.Extensions.Serializers.EPPlus\Farjad.Extensions.Serializers.EPPlus.csproj" />
+    <PackageReference Include="Farjad.Extensions.Serializers.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Farjad.Extensions.Translations.Parrot" Version="2.0.0" />
+    <PackageReference Include="Farjad.Extensions.Serializers.EPPlus" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

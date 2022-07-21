@@ -5,9 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationIcon>Farjad.ico</ApplicationIcon>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>Farjad.png</PackageIcon>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>Mohammad Ramezani</Authors>
     <Company>Farjad</Company>
     <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
@@ -21,21 +23,18 @@
 
   <ItemGroup>
     <Content Include="Farjad.ico" />
-    <None Include="Farjad.png" Pack="true" PackagePath=""/>
+    <None Include="Farjad.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Dapper" Version="2.0.023" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="6.0.7" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Abstractions\Farjad.Extensions.Caching.Abstractions\Farjad.Extensions.Caching.Abstractions.csproj" />
-    <ProjectReference Include="..\..\..\Abstractions\Farjad.Extensions.Serializers.Abstractions\Farjad.Extensions.Serializers.Abstractions.csproj" />
+    <PackageReference Include="Farjad.Extensions.Caching.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Farjad.Extensions.Serializers.Abstractions" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

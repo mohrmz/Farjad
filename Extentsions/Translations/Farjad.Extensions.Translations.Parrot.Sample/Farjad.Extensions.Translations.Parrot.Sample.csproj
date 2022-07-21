@@ -13,11 +13,8 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Abstractions\Farjad.Extensions.Translations.Abstractions\Farjad.Extensions.Translations.Abstractions.csproj" />
-    <ProjectReference Include="..\Farjad.Extensions.Translations.Parrot\Farjad.Extensions.Translations.Parrot.csproj" />
+    <PackageReference Include="Farjad.Extensions.Translations.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Farjad.Extensions.Translations.Parrot" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
