@@ -19,6 +19,7 @@
     <PackageReleaseNotes>Publish Github Packages</PackageReleaseNotes>
     <Copyright>All rights reserved for Mohammad Ramezani</Copyright>
     <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
+  
   </PropertyGroup>
   
   <ItemGroup>
