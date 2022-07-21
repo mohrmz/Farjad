@@ -9,7 +9,7 @@ on:
   pull_request:
     branches:
     - main
-    - 'releases/**'
+    - 'release*'
     - master
 
 jobs:
@@ -30,6 +30,7 @@ jobs:
         Write-Host $Env:GITHUB_REF
         $version = GetBuildVersion -VersionString $Env:GITHUB_REF
         echo "BUILD_VERSION=$version" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
+        $Token = [System.Environment]::GetEnvironmentVariable('FarjadToken')
       shell: powershell    
     
     - name: Setup NuGet
@@ -58,4 +59,4 @@ jobs:
 
     - name: Publish to github
       if: startsWith(github.ref, 'refs/heads/release')
-      run: dotnet nuget push **\*.nupkg --source "github" --api-key ${{secrets.FARJAD}} --skip-duplicate
+      run: dotnet nuget push **\*.nupkg --source "github" --api-key ${{$Token}} --skip-duplicate
