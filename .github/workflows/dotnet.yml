@@ -56,4 +56,4 @@ jobs:
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.FARJAD}} -SkipDuplicate
 
     - name: Publish to github
-      run: dotnet nuget push **\*.nupkg --source "github"
+      run: dotnet nuget push **\*.nupkg --api-key "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" --source "github"
