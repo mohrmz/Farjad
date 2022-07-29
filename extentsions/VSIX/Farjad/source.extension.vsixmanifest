@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="Farjad.36e45caa-0513-4e87-b245-29d7a314ede8" Version="2.0" Language="en-US" Publisher="Mohammad Ramezani" />
+        <DisplayName>Farjad VS2022</DisplayName>
+        <Description xml:space="preserve">Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
+        <MoreInfo>https://github.com/mohrmz/Farjad</MoreInfo>
+        <License>LICENSE.txt</License>
+        <Icon>__TemplateIcon.jpg</Icon>
+        <PreviewImage>__PreviewImage.jpg</PreviewImage>
+        <Tags>C#,web,DDD,linux,windows</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" TargetVersion="2.0" d:TargetPath="ProjectTemplates\FarjadTemplate.zip" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>

@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.1</Version>
+    <Authors>Mohammad Ramezani</Authors>
+    <Company>Farjad</Company>
+    <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
+    <PackageDescription>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</PackageDescription>
+    <PackageProjectUrl>https://github.com/mohrmz/Farjad</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohrmz/Farjad</RepositoryUrl>
+    <PackageReleaseNotes>Publish Github Packages</PackageReleaseNotes>
+    <Copyright>All rights reserved for Mohammad Ramezani</Copyright>
+    <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
+    <Hidden>true</Hidden>
+	
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="6.0.0" />
+    <PackageReference Include="Scrutor" Version="4.2.0" />
+    <PackageReference Include="Scrutor.AspNetCore" Version="3.3.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Farjad.Extensions.DependentyInjection.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Logger.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Serializers.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Extensions.Translations.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Farjad.Utilities" Version="2.0.1" />
+    <PackageReference Include="Farjad.Core.ApplicationServices" Version="2.0.1" />
+    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>
