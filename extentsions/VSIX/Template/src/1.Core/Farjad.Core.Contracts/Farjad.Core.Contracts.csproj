@@ -4,15 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <ApplicationIcon>Farjad.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Farjad.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Farjad.Core.Domain" Version="2.0.1" />
+    <PackageReference Include="Farjad.Core.Contracts" Version="2.0.1" />
+    <ProjectReference Include="../$ext_safeprojectname$.Core.Domain/$ext_safeprojectname$.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>
