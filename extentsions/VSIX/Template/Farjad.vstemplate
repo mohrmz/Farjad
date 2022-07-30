@@ -1,6 +1,6 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>Farjad Solution Template (Mohammad Ramezani)</Name>
+    <Name>Farjad Solution Template</Name>
     <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
@@ -24,33 +24,60 @@
 	</SolutionFolder>
     <SolutionFolder Name="src">
 	 <SolutionFolder Name="1.Core">
-       <ProjectTemplateLink ProjectName="$projectname$.Core.Domain"  CopyParameters="true">
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Domain"  CopyParameters="true">
         src\1.Core\Farjad.Core.Domain\FarjadCoreDomain.vstemplate
        </ProjectTemplateLink>
-       <ProjectTemplateLink ProjectName="$projectname$.Core.ApplicationServices"  CopyParameters="true">
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.ApplicationServices"  CopyParameters="true">
         src\1.Core\Farjad.Core.ApplicationServices\FarjadCoreApplicationServices.vstemplate
        </ProjectTemplateLink>
-       <ProjectTemplateLink ProjectName="$projectname$.Core.Contracts"  CopyParameters="true">
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Contracts"  CopyParameters="true">
         src\1.Core\Farjad.Core.Contracts\FarjadCoreContracts.vstemplate
        </ProjectTemplateLink>
      </SolutionFolder>
      <SolutionFolder Name="2.Infrastructures">	
 	 <SolutionFolder Name="Data">
-	  <ProjectTemplateLink ProjectName="$projectname$.Infrastructures.Data.SqlServer.Commands"  CopyParameters="true">
+	  <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructures.Data.SqlServer.Commands"  CopyParameters="true">
         src\2.Infrastructures\Data\Farjad.Infrastructures.Data.SqlServer.Commands\FarjadInfrastructuresDataSqlServerCommands.vstemplate
        </ProjectTemplateLink>
-       <ProjectTemplateLink ProjectName="$projectname$.Infrastructures.Data.SqlServer.Queries"  CopyParameters="true">
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructures.Data.SqlServer.Queries"  CopyParameters="true">
         src\2.Infrastructures\Data\Farjad.Infrastructures.Data.SqlServer.Queries\FarjadInfrastructuresDataSqlServerQueries.vstemplate
        </ProjectTemplateLink>
 	 </SolutionFolder>
      </SolutionFolder>
      <SolutionFolder Name="3.Endpoints">	
-	  <ProjectTemplateLink ProjectName="$projectname$.Endpoints.WebAPI"  CopyParameters="true">
+	  <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.WebAPI"  CopyParameters="true">
         src\3.Endpoints\Farjad.Endpoints.WebAPI\FarjadEndpointsWebAPI.vstemplate
       </ProjectTemplateLink>
      </SolutionFolder> 	 
     </SolutionFolder>	
     <SolutionFolder Name="tests">
+	 <SolutionFolder Name="unit">
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Domain.Test.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Core.Domain.Test.Unit\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Contracts.Test.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Core.Contracts.Test.Unit\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.ApplicationServices.Test.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Core.ApplicationServices.Test.Unit\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.Test.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Endpoints.Test.Unit\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+	 </SolutionFolder>
+	 <SolutionFolder Name="integration">
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructures.Test.Integration"  CopyParameters="true">
+        tests\integration\Farjad.Infrastructures.Test.Integration\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.Test.Integration"  CopyParameters="true">
+        tests\integration\Farjad.Endpoints.Test.Integration\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+	 </SolutionFolder>
+	 <SolutionFolder Name="Subcutaneous">
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.WebAPI.Test.E2E"  CopyParameters="true">
+        tests\subcutaneous\Farjad.Endpoints.WebAPI.Test.E2E\MyTemplate.vstemplate
+       </ProjectTemplateLink>
+	 </SolutionFolder>
 	</SolutionFolder>	
    </ProjectCollection>
   </TemplateContent>

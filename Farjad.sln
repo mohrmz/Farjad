@@ -166,19 +166,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subcutaneous", "Subcutaneous", "{5DAC37B3-AD07-41C1-B2FC-A2CF051EE677}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Core.Domain.Test.Unit", "samples\tests\unit\Farjad.Core.Domain.Test.Unit\Farjad.Core.Domain.Test.Unit.csproj", "{382C1EEB-2F8C-4781-A3FC-19FA87356BF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Core.Domain.Test.Unit", "samples\tests\unit\Farjad.Core.Domain.Test.Unit\Farjad.Core.Domain.Test.Unit.csproj", "{382C1EEB-2F8C-4781-A3FC-19FA87356BF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Core.Contracts.Test.Unit", "samples\tests\unit\Farjad.Core.Contracts.Test.Unit\Farjad.Core.Contracts.Test.Unit.csproj", "{C880E7B5-8BBD-4F8B-9AF5-18352B37E414}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Core.Contracts.Test.Unit", "samples\tests\unit\Farjad.Core.Contracts.Test.Unit\Farjad.Core.Contracts.Test.Unit.csproj", "{C880E7B5-8BBD-4F8B-9AF5-18352B37E414}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Core.ApplicationServices.Test.Unit", "samples\tests\unit\Farjad.Core.ApplicationServices.Test.Unit\Farjad.Core.ApplicationServices.Test.Unit.csproj", "{837DB9AA-96F3-44AA-836C-610D51814883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Core.ApplicationServices.Test.Unit", "samples\tests\unit\Farjad.Core.ApplicationServices.Test.Unit\Farjad.Core.ApplicationServices.Test.Unit.csproj", "{837DB9AA-96F3-44AA-836C-610D51814883}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Endpoints.Test.Unit", "samples\tests\unit\Farjad.Endpoints.Test.Unit\Farjad.Endpoints.Test.Unit.csproj", "{43C3AAE6-1AEF-4025-BE66-FD4FCFAF0AAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Endpoints.Test.Unit", "samples\tests\unit\Farjad.Endpoints.Test.Unit\Farjad.Endpoints.Test.Unit.csproj", "{43C3AAE6-1AEF-4025-BE66-FD4FCFAF0AAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Infrastructures.Test.Integration", "samples\tests\integration\Farjad.Infrastructures.Test.Integration\Farjad.Infrastructures.Test.Integration.csproj", "{839F7A91-5259-4BFE-94D4-2DE044FB427A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Infrastructures.Test.Integration", "samples\tests\integration\Farjad.Infrastructures.Test.Integration\Farjad.Infrastructures.Test.Integration.csproj", "{839F7A91-5259-4BFE-94D4-2DE044FB427A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Endpoints.Test.Integration", "samples\tests\integration\Farjad.Endpoints.Test.Integration\Farjad.Endpoints.Test.Integration.csproj", "{22A433C3-FFEB-466A-B772-4B440A5433B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farjad.Endpoints.Test.Integration", "samples\tests\integration\Farjad.Endpoints.Test.Integration\Farjad.Endpoints.Test.Integration.csproj", "{22A433C3-FFEB-466A-B772-4B440A5433B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Endpoints.WebAPI.Test.E2E", "samples\tests\Subcutaneous\Farjad.Endpoints.WebAPI.Test.E2E\Farjad.Endpoints.WebAPI.Test.E2E.csproj", "{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farjad.Endpoints.WebAPI.Test.E2E", "samples\tests\Subcutaneous\Farjad.Endpoints.WebAPI.Test.E2E\Farjad.Endpoints.WebAPI.Test.E2E.csproj", "{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -596,14 +596,14 @@ Global
 		{22A433C3-FFEB-466A-B772-4B440A5433B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22A433C3-FFEB-466A-B772-4B440A5433B8}.Release|x86.ActiveCfg = Release|Any CPU
 		{22A433C3-FFEB-466A-B772-4B440A5433B8}.Release|x86.Build.0 = Release|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Debug|x86.Build.0 = Debug|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Release|x86.ActiveCfg = Release|Any CPU
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1}.Release|x86.Build.0 = Release|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Debug|x86.Build.0 = Debug|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -689,7 +689,7 @@ Global
 		{43C3AAE6-1AEF-4025-BE66-FD4FCFAF0AAF} = {D33BDBE9-41BB-4DBE-B76B-751B17DE1533}
 		{839F7A91-5259-4BFE-94D4-2DE044FB427A} = {34335B76-D5A1-4E18-B143-A32CC413E02A}
 		{22A433C3-FFEB-466A-B772-4B440A5433B8} = {34335B76-D5A1-4E18-B143-A32CC413E02A}
-		{ECBF172A-F6C7-40D1-ACF7-16ECAA0AA5D1} = {5DAC37B3-AD07-41C1-B2FC-A2CF051EE677}
+		{1C2BDDAF-C9D9-4BC6-944E-A96CB335B65B} = {5DAC37B3-AD07-41C1-B2FC-A2CF051EE677}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3091158-9E0C-4832-86AD-7D8E48D0D589}
