@@ -5,11 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationIcon>Farjad.ico</ApplicationIcon>
-    <AssemblyVersion>2.0.1</AssemblyVersion>
-    <FileVersion>2.0.1</FileVersion>
+    <AssemblyVersion>2.0.2</AssemblyVersion>
+    <FileVersion>2.0.2</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>Farjad.png</PackageIcon>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <Authors>Mohammad Ramezani</Authors>
     <Company>Farjad</Company>
     <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
@@ -21,10 +21,8 @@
     <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
   </PropertyGroup>
 
-  
   <ItemGroup>
-    <Content Include="Farjad.ico" />
     <None Include="Farjad.png" Pack="true" PackagePath="" />
   </ItemGroup>
-
+  
 </Project>

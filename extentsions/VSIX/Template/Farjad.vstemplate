@@ -52,30 +52,30 @@
     </SolutionFolder>	
     <SolutionFolder Name="tests">
 	 <SolutionFolder Name="unit">
-	   <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Domain.Test.Unit"  CopyParameters="true">
-        tests\unit\Farjad.Core.Domain.Test.Unit\MyTemplate.vstemplate
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Domain.Tests.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Core.Domain.Tests.Unit\MyTemplate.vstemplate
        </ProjectTemplateLink>
-       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Contracts.Test.Unit"  CopyParameters="true">
-        tests\unit\Farjad.Core.Contracts.Test.Unit\MyTemplate.vstemplate
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.Contracts.Tests.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Core.Contracts.Tests.Unit\MyTemplate.vstemplate
        </ProjectTemplateLink>
-       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.ApplicationServices.Test.Unit"  CopyParameters="true">
-        tests\unit\Farjad.Core.ApplicationServices.Test.Unit\MyTemplate.vstemplate
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Core.ApplicationServices.Tests.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Core.ApplicationServices.Tests.Unit\MyTemplate.vstemplate
        </ProjectTemplateLink>
-	   <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.Test.Unit"  CopyParameters="true">
-        tests\unit\Farjad.Endpoints.Test.Unit\MyTemplate.vstemplate
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.Tests.Unit"  CopyParameters="true">
+        tests\unit\Farjad.Endpoints.Tests.Unit\MyTemplate.vstemplate
        </ProjectTemplateLink>
 	 </SolutionFolder>
 	 <SolutionFolder Name="integration">
-	   <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructures.Test.Integration"  CopyParameters="true">
-        tests\integration\Farjad.Infrastructures.Test.Integration\MyTemplate.vstemplate
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructures.Tests.Integration"  CopyParameters="true">
+        tests\integration\Farjad.Infrastructures.Tests.Integration\MyTemplate.vstemplate
        </ProjectTemplateLink>
-       <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.Test.Integration"  CopyParameters="true">
-        tests\integration\Farjad.Endpoints.Test.Integration\MyTemplate.vstemplate
+       <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.Tests.Integration"  CopyParameters="true">
+        tests\integration\Farjad.Endpoints.Tests.Integration\MyTemplate.vstemplate
        </ProjectTemplateLink>
 	 </SolutionFolder>
 	 <SolutionFolder Name="Subcutaneous">
-	   <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.WebAPI.Test.E2E"  CopyParameters="true">
-        tests\subcutaneous\Farjad.Endpoints.WebAPI.Test.E2E\MyTemplate.vstemplate
+	   <ProjectTemplateLink ProjectName="$safeprojectname$.Endpoints.WebAPI.Tests.E2E"  CopyParameters="true">
+        tests\subcutaneous\Farjad.Endpoints.WebAPI.Tests.E2E\MyTemplate.vstemplate
        </ProjectTemplateLink>
 	 </SolutionFolder>
 	</SolutionFolder>	
