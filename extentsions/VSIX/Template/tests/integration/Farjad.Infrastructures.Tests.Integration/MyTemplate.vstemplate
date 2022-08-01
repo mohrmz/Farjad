@@ -1,13 +1,13 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Farjad.Endpoints.Test.Unit</Name>
+    <Name>Farjad.Infrastructures.Tests.Integration</Name>
     <Description>Farjad is a powerful library for Domain Driven Design architecture, CQRS pattern, event driven development</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Farjad.Endpoints.Test.Unit</DefaultName>
+    <DefaultName>Farjad.Infrastructures.Tests.Integration</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
@@ -17,7 +17,7 @@
     <PreviewImage>__PreviewImage.jpg</PreviewImage>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Farjad.Endpoints.Test.Unit.csproj" File="Farjad.Endpoints.Test.Unit.csproj" ReplaceParameters="true">
+    <Project TargetFileName="Farjad.Infrastructures.Tests.Integration.csproj" File="Farjad.Infrastructures.Tests.Integration.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="Usings.cs">Usings.cs</ProjectItem>
     </Project>
   </TemplateContent>

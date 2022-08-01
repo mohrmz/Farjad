@@ -17,10 +17,10 @@
     <PackageReleaseNotes>Publish Github Packages</PackageReleaseNotes>
     <Copyright>All rights reserved for Mohammad Ramezani</Copyright>
     <PackageTags>ddd-architecture,cqrs-pattern,event-driven</PackageTags>
-    <Hidden>true</Hidden>
-	
+    <Hidden>true</Hidden>	
   </PropertyGroup>
-  
+ 
+
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.1.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
